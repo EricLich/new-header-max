@@ -223,7 +223,21 @@ nav{
     color: white;
     font-weight: bold;
 }
-
+.arma{
+    color: #01f603 !important;    
+}
 .nav-right a:hover{
     color: #01f603;
+}
+
+
+/* pruebita */
+.prueba{
+    height: 100px;
+    width: 100px;
+    background-color:white;
+}
+
+.hidden{
+    display: none;
 }
