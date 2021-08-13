@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Source Sans Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji,sans-serif ;
+}
+
+header{
+    width: 100%;
+    height: 170px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.container{
+ width: 95%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.links{
+    background-color: #555;
+    width: 100%;
+    height: 30px;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 3rem;
+}
+
+.links a{
+    color: white;
+}
+
+.rma, .ayuda{
+    margin-left: 10px;
+}
+
+.links a i{
+    margin-right: 5px;
+    color: #01f603;
+}
+
+.header-top {
+    height: 60%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.header-top .logo-search a{
+    width: 25%;
+    min-width: 170px;
+    
+}
+
+.header-top .logo-search a img{
+    min-width: 100%;
+}
+
+.search{
+    width: 60%;
+    align-self: right;
+    margin-left: 5px;
+    
+}
+.search form{
+    width: 100%;
+    padding:5px 7px 5px 7px;
+    background-color: #fff;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-input{
+    font-size: 16px;
+    letter-spacing: .5px !important;
+    padding-left: 3px;
+}
+
+.header-top .search form input{
+    border: none;
+    width: 90%;
+}
+
+.header-top .search form input:focus{
+    outline: none;
+}
+
+.search button{
+    border-radius: 10px;
+    border: none;
+    background-color: #01f603;
+}
+
+.search button:hover{
+    cursor: pointer;
+}
+
+.fa-search{ 
+    padding: 12px;
+    font-size: 1.5em;
+}
+
+.session-carrito{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+}
+
+.session{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.session-carrito{
+    color: white;
+}
+
+.session-carrito a{
+    color: white;
+}
+
+.session-carrito a i{
+    margin-right: 5px;
+}
+
+.carrito{
+    color: white;
+    transition: ease-in-out 5ms;
+}
+
+.carrito:hover{
+    color: #01f603;
+}
+
+.fa-user{
+    font-size: 1.5em;
+    margin-right: 5px;  
+    transition: ease-in-out 5ms;  
+}
+
+.fa-cart-plus{
+    font-size: 1.5em;
+    margin-right: 5px;
+    transition: ease-in-out 5ms;
+}
+
+.cuenta:hover{
+    color: #01f603;
+}
+
+.fa-bars{
+    background-color: #01f603;
+    font-weight: bold;
+}
+
+
+nav{
+    height:50px;
+    display: flex;
+    width: 55%;
+    align-items: center;
+    justify-content: space-between;
+    align-self: flex-start;
+}
+
+/* .nav-bar{
+    width: 60%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+} */
+
+.nav-left{
+    width: 15%;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left p{
+    color: white;
+    margin-left: 2px;
+}
+
+.nav-right{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-right a{
+    color: white;
+    font-weight: bold;
+}
+
+.nav-right a:hover{
+    color: #01f603;
+}
