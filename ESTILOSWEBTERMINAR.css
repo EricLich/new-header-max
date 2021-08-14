@@ -1,13 +1,14 @@
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: Source Sans Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji,sans-serif ;
 }
-
+/* header */
 header{
     width: 100%;
-    height: 170px;
+    height: 90px;
     background-color: #000;
     display: flex;
     flex-direction: column;
@@ -19,15 +20,15 @@ header{
 .container{
  width: 95%;
 }
-
+/* reseteo de diseño de links */
 a{
     text-decoration: none;
 }
-
+/* links de arriba de todo */
 .links{
     background-color: #555;
     width: 100%;
-    height: 30px;
+    height: 10px;
     padding: 5px 0;
     display: flex;
     flex-direction: row;
@@ -37,44 +38,55 @@ a{
 }
 
 .links a{
-    color: white;
+    display: none;
 }
 
-.rma, .ayuda{
-    margin-left: 10px;
-}
 
-.links a i{
-    margin-right: 5px;
-    color: #01f603;
-}
-
+/*parte principal del header (logo, searchbox, cuenta y carrito) */
 .header-top {
-    height: 60%;
+    height: 30%;
     width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+/* diseño de logo y menu hamburguesa */
+.hamburger-menu{
+    width: 15%;
+    height: 40%;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
 
-.logo-search{
+.hamburger-menu span{
+    width: 100%;
+    height: 20px;
+    background-color: #fff;
+}
+
+
+.logo{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 45%;
+}
+/*tamaño de logo*/
+.header-top .logo a{
+    width: 100%;  
 }
 
-.header-top .logo-search a{
-    width: 25%;
-    min-width: 273px;
-    
-}
-
-.header-top .logo-search a img{
+.header-top .logo a img{
     min-width: 100%;
 }
-
+/* diseño de searchbar */
 .search{
+    display: none;
     width: 60%;
     align-self: right;
     margin-left: 5px; 
@@ -123,18 +135,23 @@ a{
     font-size: 1.5em;
 }
 
+/* diseño de parte de cuenta y carrito */
 .session-carrito{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 15%;
+    width: 35%;
+}
+
+.session-carrito p{
+    display: none;
 }
 
 .session{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .session-carrito{
@@ -143,10 +160,13 @@ a{
 
 .session-carrito a{
     color: white;
+
 }
 
 .session-carrito a i{
-    margin-right: 5px;
+    margin-right: 3px;
+    font-size: 18px;
+    
 }
 
 .carrito{
@@ -174,6 +194,9 @@ a{
     color: #01f603;
 }
 
+/* diseño de parte inferior de nav*/
+
+/* diseño de menu de categorias */
 .fa-bars{
     background-color: #01f603;
     font-weight: bold;
@@ -182,22 +205,16 @@ a{
 
 nav{
     height:50px;
-    display: flex;
+    display: none;
     width: 57%;
     align-items: center;
     justify-content: space-between;
     align-self: flex-start;
 }
 
-/* .nav-bar{
-    width: 60%;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-} */
-
+/*diseño de parte de menu de categorias*/
 .nav-left{
-    width: 15%;
+    width: 17%;
     display: flex;
     flex-direction:row;
     align-items: center;
@@ -213,6 +230,7 @@ nav{
     margin-left: 2px;
 }
 
+/* diseño de armado de pc y combos */
 .nav-right{
     width: 25%;
     display: flex;
@@ -241,3 +259,27 @@ nav{
 .hidden{
     display: none;
 }
+
+/* mobile */
+
+/* tablets y pcs hd */
+@media tablets and (min-width: 768px){
+    .links a{
+        color: white;
+    }
+    
+    .rma, .ayuda{
+        margin-left: 10px;
+    }
+    
+    .links a i{
+        margin-right: 5px;
+        color: #01f603;
+    }
+}
+
+
+/* full hd y + */
+@media pcs and (min-width: 1366px){
+
+} 

@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/gh/persano/MaximusWebFonts@1.7.9.4/slick.js" async></script>
     <script src="https://cdn.jsdelivr.net/gh/persano/MaximusWebFonts@1.7.9.4/funcionescustommaximus4.js" async></script>-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <title>Header nuevo</title>
 </head>
 <body>
@@ -24,30 +24,78 @@
             <a href="#"  class="rma"><i class="far fa-file"></i> RMA - Garantia</a>
             <a href="#" class="ayuda"><i class="fas fa-question-circle"></i></i> Ayuda</a>
         </div>
-        <div class="container">
+        <!-- search para mobile -->
+        <div class="search-mobile">
+            <form>
+                <input type="text" placeholder="BUSCAR..." class="search-input">
+                <button><i class="fas fa-search"></i></button>  
+            </form>
+        </div>
+        <!-- carrito desplegable para mobile -->
+        <div class="carrito-drop-mobile">
+            <div class="flex-drop-carrito">
+                <div class="su-pedido">
+                    <h3>Su pedido</h3>
+                    <p>Cantidad de Items 0 ($ 0,00)</p>
+                </div>
+                <button>VER</button>
+            </div>
+        </div>
+        <div class="menu-categorias">
+            <ul class="categorias">
+                <li><a href="#">NOTEBOOKS</a></li>
+                <li class="menu-productos-dropdown" >
+                    <div class="drop-prods">
+                        <div class="drop-prods-button">
+                            <p>PRODUCTOS</p>
+                            <i class="fas fa-plus"></i>
+                            <i class="fas fa-minus"></i>
+                        </div>
+                        <ul>
+                            asd
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="container-header">
 
             <div class="header-top">
-                <div class="logo-search">
+                <div class="logo">
+                    <div class="hamburger-menu">
+                        <span class="burg burg-1"></span>
+                        <span class="burg burg-2"></span>
+                        <span class="burg burg-3"></span>
+                    </div>
+                    <i class="fas fa-times"></i>
                     <a href="#">
                         <img src="./logomaximusverdenew.svg" alt="">
-                    </a>
-                    
-                    
+                    </a>                  
                 </div>
                 
-                <div class="search">
+
+                <!-- search para web -->
+                <div class="search-web">
                     <form>
                         <input type="text" placeholder="BUSCAR..." class="search-input">
                         <button><i class="fas fa-search"></i></button>  
                     </form>
                 </div>
+                
+
                 <div class="session-carrito">
-                    <a href="#" class="cuenta"><i class="fas fa-user"></i>Mi Cuenta</a>
-                    <a href="#" class="carrito"><i class="fas fa-cart-plus"></i></i>(0) $0.00</a> 
+                    <a href="#" class="cuenta"><i class="fas fa-user"></i><p>Mi Cuenta</p></a>
+                    <a href="#" class="search-mobile-button"><i class="fas fa-search 1"></i></a>
+                    <a href="#" class="carrito"><i class="fas fa-cart-plus"></i></i><p>(0) $0.00</p><i class="fas fa-caret-down"></i></a>                
                 </div>
             </div>
-            
-            <nav class="nav-bar">
+
+            <!-- 
+            <nav class="nav-bar-web">
                 <div class="nav-left">
                     <i class="fas fa-bars"></i>
                      <p>Todas las categorías</p>
@@ -56,14 +104,22 @@
                     <a href="#" class="arma">ARMÁ TU PC</a>
                     <a href="#">ARMÁ TU COMBO</a>
                 </div>
-            </nav>
+            </nav> -->
         </div>
     </header>
     
     <div class="prueba">
 
     </div>
-    <button onclick="mostrar(event)" >ok</button>
+    <main class="main">
+
+
+
+    </main>
+
+
+
+
     <script src="./app.js"></script>
 </body>
 </html>

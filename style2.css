@@ -1,0 +1,286 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Source Sans Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji,sans-serif ;
+}
+:root {
+    --maximus-green: #01f603;  
+  }
+/* diseño header */
+header{
+    width: 100%;
+    height: 90px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+}
+
+a{
+    text-decoration: none;
+}
+.container{
+    width: 95%;
+    margin: auto;
+}
+
+/*links*/
+.links{
+    height: 10px;
+    width: 100%;
+    background-color: #555;
+}
+
+.links a{
+    display:none;
+}
+
+.container-header{
+    width: 95%;
+    height: 90%;
+    display: flex;
+    align-self: baseline;
+    margin: auto;
+}
+/*parte principal header*/
+.header-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.search-web{
+    display: none;
+}
+/*logo y hamburger menu*/
+.logo{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo .hamburger-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.hamburger-menu{
+    height: 30%;   
+    width: 15%;
+}
+
+.hamburger-menu span{
+    background-color: #fff;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+}
+
+.header-top a{
+    width: 78%;
+    display: flex;
+    align-items: center;
+}
+
+.header-top a img{
+    width: 100%;
+}
+
+/* menu de cuenta, busqueda y carrito */
+
+.session-carrito{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.session-carrito p{
+    display: none;
+}
+
+.session-carrito i{
+    color: white;
+    font-size: 18px;
+}
+
+.carrito .fa-caret-down{
+    margin-left: 5px;
+}
+
+/*search mobile - ESTA ESCONDIDO EN UN PRINCIPIO*/
+
+.search-mobile{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transform: translateY(-100%);
+    transition: ease-in-out 0.3s;
+}
+
+.search-mobile-active{
+    display: flex;
+    transform: translateY(0);
+}
+
+.search-mobile form{
+    margin: auto;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-mobile form input{
+    flex: 1;
+    width: 90%;
+    padding: 12px 0 12px 5px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+.search-mobile form input{
+    outline: none;
+}
+
+.search-mobile form button{
+    padding: 10.5px;
+    background-color: var(--maximus-green);
+    border:none;
+    border-radius: 0 5px 5px 0;
+}
+
+.search-mobile form button i{
+    color: white;
+    font-size: 18px;
+}
+
+/*dropdown carrito mobile - ESCONDIDO EN MOBILE*/
+.carrito-drop-mobile{
+    position: absolute;
+    width: 100%; 
+    height: 80%; 
+    top: 90px;
+    margin: auto;
+    z-index: -3;
+    background-color: black;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    transform: translateX(100%); 
+    transition: ease-in-out 0.3s;
+    border-radius: 0 0 5px 5px;
+}
+.carrito-drop-active{
+    display: flex;
+    transform: translateX(0%);
+    z-index: 3;
+}
+
+.flex-drop-carrito{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.carrito-drop-mobile h3{
+    color: var(--maximus-green);
+}
+.carrito-drop-mobile p{
+    color: white;
+    padding-bottom: 5px;
+}
+.carrito-drop-mobile button{
+    background-color: var(--maximus-green);
+    font-weight: bold;
+    padding:5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/*sidebar principal - ESCONDIDO A LA IZQUIERDA EN MOBILE */
+/* convertir hamburguesa a cruz de cierre de menu */
+.menu-categorias{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    position: absolute;
+    top: 90px;
+    transform: translateX(-100%);
+    transition: ease-in-out 0.3s;
+}
+
+.menu-categorias-active{
+    transform: translateX(0);
+}
+
+.categorias{
+    width: 100%;
+}
+.categorias li{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.menu-categorias p, .menu-categorias i{
+    color: white;
+}
+
+.menu-productos-dropdown{
+    width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center; 
+}
+
+.fa-times, .hamburger-menu:hover{
+    cursor: pointer;
+}
+
+.fa-times{
+    display: none;
+    font-size: 2rem;
+    color: white;
+}
+
+.cruz-active{
+    width: 15%;
+    display: block;
+}
+
+.hamburger-inactive{
+    display: none;
+    width: 0;
+    margin-left: -10px;
+}
+
+
+/* main blurreado para search mobile */
+.main{
+height: 50vh;
+}
