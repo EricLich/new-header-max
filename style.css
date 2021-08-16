@@ -1,0 +1,605 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Source Sans Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji,sans-serif ;
+}
+:root {
+    --maximus-green: #01f603;  
+}
+
+.none{
+    display: none;
+    width: 0;
+    height: 0;
+}
+.block{
+    display: block;
+}
+.flex{
+    display: flex;
+}
+.fa-plus, .fa-minus{
+    cursor: pointer;
+    transition: ease-in-out 1s;
+}
+/* diseño header */
+header{
+    width: 100%;
+    height: 120px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    z-index: 3s;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+.container{
+    width: 95%;
+    margin: auto;
+}
+
+/*links*/
+.links{
+    height: 10px;
+    width: 100%;
+    background-color: #555;
+}
+
+.links a{
+    display:none;
+}
+
+.container-header{
+    width: 95%;
+    height: 90%;
+    display: flex;
+    align-self: baseline;
+    margin: auto;
+}
+/*parte principal header*/
+.header-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.search-web{
+    display: none;
+}
+/*logo y hamburger menu*/
+.logo{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo .hamburger-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.hamburger-menu{
+    height: 30%;   
+    min-width: 2rem;
+
+}
+
+.hamburger-menu span{
+    background-color: #fff;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+}
+
+.header-top a{
+    width: 78%;
+    display: flex;
+    align-items: center;
+}
+
+.header-top a img{
+    max-width: 220px;
+    min-width: 145px;
+}
+
+/* menu de cuenta, busqueda y carrito */
+
+.session-carrito{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.session-carrito p{
+    display: none;
+}
+
+.session-carrito i{
+    color: white;
+    font-size: 18px;
+}
+
+.carrito .fa-caret-down{
+    margin-left: 5px;
+}
+
+/*search mobile - ESTA ESCONDIDO EN UN PRINCIPIO*/
+
+.search-mobile{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transform: translateY(-100%);
+    transition: ease-in-out 0.3s;
+}
+
+.session-carrito a{
+    display: flex;
+    justify-content: center;
+}
+
+.search-mobile-active{
+    display: flex;
+    transform: translateY(0);
+}
+
+.fa-arrow-left{
+    color: white;
+    margin-right: 0.7rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.search-mobile form{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-mobile form input{
+    flex: 1;
+    width: 90%;
+    padding: 12px 0 12px 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+.search-mobile form input{
+    outline: none;
+}
+
+.search-mobile form button{
+    padding: 10.5px;
+    background-color: var(--maximus-green);
+    border:none;
+    border-radius: 0 5px 5px 0;
+}
+
+.search-mobile form button i{
+    color: white;
+    font-size: 18px;
+}
+
+/*dropdown carrito mobile - ESCONDIDO EN MOBILE*/
+.carrito-drop-mobile{
+    position: absolute;
+    width: 100%; 
+    height: 80%; 
+    top: 90px;
+    margin: auto;
+    z-index: -3;
+    background-color: black;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    transform: translateX(100%); 
+    transition: ease-in-out 0.3s;
+    border-radius: 0 0 5px 5px;
+}
+.carrito-drop-active{
+    display: flex;
+    transform: translateX(0%);
+    z-index: 3;
+}
+
+.flex-drop-carrito{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.carrito-drop-mobile h3{
+    color: var(--maximus-green);
+}
+.carrito-drop-mobile p{
+    color: white;
+    padding-bottom: 5px;
+}
+.carrito-drop-mobile button{
+    background-color: var(--maximus-green);
+    font-weight: bold;
+    padding:5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/*sidebar principal - ESCONDIDO A LA IZQUIERDA EN MOBILE */
+/* convertir hamburguesa a cruz de cierre de menu */
+.menu-categorias{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    position: absolute;
+    top: 120px;
+    transform: translateX(-100%);
+    transition: ease-in-out 0.3s;
+}
+
+.menu-categorias-active{
+    transform: translateX(0);
+}
+
+.categorias{
+    width: 100%;
+}
+.categorias li{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.menu-categorias p, .menu-categorias i{
+    color: white;
+}
+
+.menu-productos-dropdown{
+    width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center; 
+}
+
+.fa-times, .hamburger-menu:hover{
+    cursor: pointer;
+}
+
+.fa-times{
+    display: none;
+    font-size: 2rem;
+    z-index: 99;
+    color: white;
+}
+
+.cruz-active{
+    width: 15%;
+    display: block;
+}
+
+.hamburger-inactive{
+    display: none;
+    width: 0;
+    margin-left: -10px;
+    margin-right: -2rem;
+}
+
+/* CATEGORIAS */
+.menu-categorias{
+    width: 100%;
+    height: 85vh;
+    overflow-y: scroll;
+    padding-bottom: 1rem;
+}
+.categorias{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.menu-productos-dropdown{
+    width: 100%;
+}
+
+
+.categoria{
+    color: white;
+    margin-bottom: 3rem;
+    margin-top: 0.5rem;
+}
+
+.notebooks-link{
+    color: white  
+}
+
+.dropdown-name-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.drop{
+    width: 100%;
+}
+.prods-dropdown{
+    width: 95%;
+    margin: auto;
+    flex-direction: column;
+    transition: ease-in-out 0.3s;
+}
+
+.secc-l, .secc-lc, .secc-rc, .secc-r{
+    justify-self: flex-start;
+    align-self: flex-start;
+    margin-bottom: 0;
+}
+
+.prods-secc-interna{
+    color: var(--maximus-green);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.link-dropdown a{
+    color: white;
+}
+
+.prods-secc-interna h4{
+    margin-bottom: 1rem;
+}
+
+/* arma tu pc */
+
+.arma-tu-pc{
+    color: var(--maximus-green);
+}
+
+/* arma tu combo */
+.arma-tu-combo{
+    color: white;
+}
+
+/* main blurreado para search mobile */
+.main{
+height: 100px;
+background-color: gray;
+}
+
+
+/***************    TABLETS     *****************/
+@media (min-width: 735px){
+    .links{
+        background-color: #555;
+        width: 100%;
+        height: 30px;
+        padding: 5px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 3rem;
+    }
+    
+    .links a{
+        display: flex;
+        color: white;
+        margin-left: 1rem;
+    }
+    .links a i{
+        color: var(--maximus-green);
+        margin-right: 5px;
+    }
+    .menu-categorias{
+        height: 89vh;
+    }
+
+    .logo{
+        width: 30%;
+    }
+
+    .prods-dropdown{
+        width: 100%;
+        margin: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .secc-l, .secc-lc, .secc-rc{
+        margin-right: 1.5rem;
+    }
+
+    .prods-dropdown h4{
+        font-size: 0.9rem;
+    }
+
+}
+
+
+/***************       PCS      ***************/
+@media (min-width: 769px){
+    .links{
+        background-color: #555;
+        width: 100%;
+        height: 30px;
+        padding: 5px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 3rem;
+    }
+    
+    .links a{
+        display: flex;
+        color: white;
+        margin-left: 1rem;
+    }
+    .links a i{
+        color: var(--maximus-green);
+        margin-right: 5px;
+    }
+    .logo, .search-web{
+        width: 25%;
+    }
+    
+    .hamburger-menu{
+        display: none;
+        width: 0;
+        height: 0;
+    }
+    .burg{
+        display: none;
+        width: 0;
+    }
+    .logo a{
+        width: 100%;
+        justify-self: flex-start;
+    }
+
+    .session-carrito p{
+        display: block;
+    }
+
+    .session-carrito{
+        width: 10%;
+        justify-content: flex-end;
+    }
+
+    .search-mobile-button{
+        width: 0;
+        height: 0;
+        display: none;
+    }
+    .search-mobile-button i{
+        width: 0;
+        display: none;
+    }
+
+    .search-web{
+        display: flex;
+        width: 50%;
+        align-self: right;
+        /* margin: auto; */
+    }
+    
+    
+    .search-web form{
+        width: 80%;
+        margin: auto;
+        padding:5px 7px 5px 7px;
+        background-color: #fff;
+        border-radius: 7px;
+        border: 1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .search-input{
+        font-size: 16px;
+        width: 100%;
+        letter-spacing: .5px !important;
+        padding-left: 3px;
+    }
+    
+    .header-top .search-web form input{
+        border: none;
+        width: 90%;
+    }
+    
+    .header-top .search-web form input:focus{
+        outline: none;
+    }
+    
+    .search-web button{
+        border-radius: 10px;
+        border: none;
+        background-color: #01f603;
+    }
+    
+    .search-web button:hover{
+        cursor: pointer;
+    }
+    
+    .fa-search{ 
+        padding: 12px;
+        font-size: 1.5em;
+    }
+
+    .carrito-drop-mobile{
+        position: absolute;
+        width: 30%; 
+        height: 70%; 
+        top: 120px;
+        margin: auto;
+        z-index: -3;
+        background-color: black;
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; 
+        transform: translateX(1000%); 
+        transition: ease-in-out 0.3s;
+        border-radius: 0 0 5px 5px;
+    }
+    .carrito-drop-active{
+        display: flex;
+        transform: translateX(118%);
+
+    }
+
+    .session-carrito{
+        width: 10%;
+        align-self: center;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+    }
+
+    .session-carrito:first-child{
+        flex: 1;
+    }
+
+    .logo a img{
+        justify-self: flex-start;
+    }
+
+    
+}
+
+/***************       PCS APARECE SEARCH     ***************/

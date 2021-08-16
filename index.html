@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/gh/persano/MaximusWebFonts@1.7.9.4/slick.js" async></script>
     <script src="https://cdn.jsdelivr.net/gh/persano/MaximusWebFonts@1.7.9.4/funcionescustommaximus4.js" async></script>-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
     <title>Header nuevo</title>
 </head>
 <body>
@@ -27,11 +27,12 @@
         <!-- search para mobile -->
         <div class="search-mobile">
             <form>
+                <i class="fas fa-arrow-left guardar-search-mobile"></i>
                 <input type="text" placeholder="BUSCAR..." class="search-input">
                 <button><i class="fas fa-search"></i></button>  
             </form>
         </div>
-        <!-- carrito desplegable para mobile -->
+        <!-- carrito desplegable -->
         <div class="carrito-drop-mobile">
             <div class="flex-drop-carrito">
                 <div class="su-pedido">
@@ -41,24 +42,346 @@
                 <button>VER</button>
             </div>
         </div>
+
+        <!-- //////////////////////   MENU CATEGORIAS   //////////////////////////// -->
         <div class="menu-categorias">
             <ul class="categorias">
-                <li><a href="#">NOTEBOOKS</a></li>
-                <li class="menu-productos-dropdown" >
-                    <div class="drop-prods">
-                        <div class="drop-prods-button">
-                            <p>PRODUCTOS</p>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-minus"></i>
-                        </div>
-                        <ul>
-                            asd
-                        </ul>
-                    </div>
+                <li class="categoria"><a class="notebooks-link" href="#">NOTEBOOKS</a></li>
+                <!-- SECCION ARMA TU PC -->
+                <li class="categoria">
+                    <a href="#" class="arma-tu-pc">ARMA TU PC</a>
                 </li>
+                <!-- FIN SECCION ARMA TU PC -->
+
+                <!-- SECCION ARMA TU COMBO -->
+                <li class="categoria">
+                    <a href="#" class="arma-tu-combo">ARMA TU COMBO</a>
+                </li>
+                <!-- FIN SECCION ARMA TU COMBO -->
+
+                <!-- SECCION DROPDOWN PRODUCOS -->
+                <li class="menu-productos-dropdown categoria" >
+                    <div class="drop">
+                        <div class="dropdown-productos">
+                            <div class="dropdown-name-buttons" onclick="showOrHide(this)">
+                                <p>PRODUCTOS</p>
+                                <div class="botones-drop-menu-cat">
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-minus none"></i>
+                                </div>
+                            </div>
+                            <ul class="prods-dropdown none"> <!-- 4 secciones L LC RC R-->                                
+                                <!-- SECCION IZQUIERDA (MICROS - MOTHERS - RAM - GPUS)   -->
+                                <li class="secc-l">
+                                    <!-- PROCESADORES -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">MICROPROCESADORES</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Socket AMD AM4</a></li>
+                                            <li class="link-dropdown"><a href="#">Socket Intel 1151</a></li>
+                                            <li class="link-dropdown"><a href="#">Socket Intel 1200</a></li>
+                                        </ul>  
+                                    </div>
+                                    <!-- MOTHERBOARDS -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">MOTHERBOARDS</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Mother AMD AM4</a></li>
+                                            <li class="link-dropdown"><a href="#">Mother Intel 1151</a></li>
+                                            <li class="link-dropdown"><a href="#">Mother Intel 1200</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- RAM -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">MEMORIAS RAM</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Memorias Para PC (UDIMM)</a></li>
+                                            <li class="link-dropdown"><a href="#">Memorias Para Notebook (SODIMM)</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- PLACAS DE VIDEO -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">PLACAS DE VIDEO</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Placa de video AMD Radeon</a></li>
+                                            <li class="link-dropdown"><a href="#">Placa de Video Nvidia</a></li>
+                                        </ul>
+                                    </div>
+                                </li>                                
+                                <!-- SECCION CENTRO IZQUIERDA (ALMACENAMIENTO - REFRIGERACION - TELEVISORES)  -->
+                                <li class="secc-lc">
+                                    <!-- ALMACENAMIENTO -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">ALMACENAMIENTO</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Discos Externos USB</a></li>
+                                            <li class="link-dropdown"><a href="#">Discos Rígidos HDD para Notebook</a></li>
+                                            <li class="link-dropdown"><a href="#">Discos Rígidos HDD para PC</a></li>
+                                            <li class="link-dropdown"><a href="#">Discos Sólidos SSD Internos</a></li>
+                                            <li class="link-dropdown"><a href="#">Memorias SD - Pendrives</a></li>
+                                        </ul>  
+                                    </div>
+
+                                    <!-- REFRIGERACION -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">REFRIGERACION</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Air Cooling</a></li>
+                                            <li class="link-dropdown"><a href="#">Water Cooling</a></li>
+                                            <li class="link-dropdown"><a href="#">Pasta Térmica</a></li>
+                                            <li class="link-dropdown"><a href="#">Fan 120mm</a></li>
+                                            <li class="link-dropdown"><a href="#">Fan 140mm</a></li>
+                                            <li class="link-dropdown"><a href="#">Accesorios</a></li>
+                                        </ul>  
+                                    </div>
+
+                                    <!-- TELEVISORES -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">TELEVISORES</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Smart TV</a></li>
+                                        </ul>  
+                                    </div>
+                                </li>                                
+                                <!-- SECCION CENTRO DERECHA  (FUENTES - GABINETES - SILLAS - TABLETS)   -->
+                                <li class="secc-rc">
+                                    <!-- FUENTES -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">FUENTES</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Sin Certificado</a></li>
+                                            <li class="link-dropdown"><a href="#">80 Plus White</a></li>
+                                            <li class="link-dropdown"><a href="#">80 Plus Bronce</a></li>
+                                            <li class="link-dropdown"><a href="#">80 Plus Gold</a></li>
+                                        </ul>  
+                                    </div>
+
+                                    <!-- GABINETES -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">GABINETES</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Full Tower</a></li>
+                                            <li class="link-dropdown"><a href="#">Mid Tower</a></li>
+                                            <li class="link-dropdown"><a href="#">Mini Tower</a></li>
+                                        </ul>  
+                                    </div>
+
+                                    <!-- SILLAS -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">SILLAS</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Sillas Gamer</a></li>                                    
+                                        </ul>  
+                                    </div>
+                                    
+                                    <!-- TABLETS -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">TABLETS</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Tablets Digitalizadoras</a></li>                                    
+                                        </ul>  
+                                    </div>
+                                </li>
+                                <!-- SECCION DERECHA  (ACCESORIOS - SO - CAPTURADORAS - SMARTWATCH/BAND - PEQUEÑOS ELECTRO) -->
+                                <li class="secc-rc">
+                                    <!-- ACCESORIOS -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">ACCESORIOS</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Soportes de GPU</a></li>                                    
+                                            <li class="link-dropdown"><a href="#">Cables Mallados</a></li>                                    
+                                            <li class="link-dropdown"><a href="#">Tiras LED</a></li>                                    
+                                            <li class="link-dropdown"><a href="#">Estabilizador y UPS</a></li>                                    
+                                            <li class="link-dropdown"><a href="#">Routers</a></li>                                    
+                                            <li class="link-dropdown"><a href="#">Mochilas y Bolsos</a></li>                                    
+                                        </ul>  
+                                    </div>
+
+                                    <!-- SISTEMA OPERATIVO -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">SISTEMA OPERATIVO</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Microsoft Windows</a></li>                                                                       
+                                        </ul>  
+                                    </div>
+
+                                    <!-- CAPTURADORAS DE VIDEO -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">CAPTURADORAS DE VIDEO</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Capturadoras de Video</a></li>                                                                       
+                                        </ul>  
+                                    </div>
+
+                                    <!-- SMARTWATCH - SMARTBAND -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">SMARTWATCH - SMARTBAND</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">SmartBand</a></li>                                                                       
+                                        </ul>  
+                                    </div>
+
+                                    <!-- SMARTWATCH - SMARTBAND -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">SMARTWATCH - SMARTBAND</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">SmartBand</a></li>                                                                       
+                                        </ul>  
+                                    </div>
+
+                                    <!-- PEQUEÑOS ELECTRODOMESTICOS -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">PEQUEÑOS ELECTRODOMESTICOS</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Termometros</a></li>                                                                       
+                                            <li class="link-dropdown"><a href="#">TV Stick - TV Box</a></li>                                                                       
+                                        </ul>  
+                                    </div>
+                                </li>                                
+                            </ul>
+                        </div>
+                    </div>                    
+                </li>
+                <!-- FIN SECCION DROPDOWN PRODUCOS -->
+                    
+                <!-- SECCION DROPDOWN PERIFERICOS -->
+                <li class="menu-productos-dropdown categoria">
+                    <div class="drop">                      
+                        <div class="dropdown-perifericos">
+                            <div class="dropdown-name-buttons" onclick="showOrHide(this)">
+                                <p>PERIFERICOS</p> 
+                                <div class="botones-drop-menu-cat">
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-minus none"></i>   
+                                </div>
+                            </div>
+                            <ul class="prods-dropdown none"> <!-- 4 secciones L LC RC R-->
+                                <!-- SECCION IZQUIERDA (TECLADOS - MOUSE) -->
+                                <li class="secc-l">
+                                <!-- TECLADOS -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">TECLADOS</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Teclados Mecánicos</a></li>
+                                            <li class="link-dropdown"><a href="#">Teclados Membrana</a></li>
+                                            <li class="link-dropdown"><a href="#">Teclados RGB</a></li>
+                                            <li class="link-dropdown"><a href="#">Combo Teclados</a></li>
+                                            <li class="link-dropdown"><a href="#">Accesorios para Teclado</a></li>
+                                        </ul>  
+                                    </div>
+                                <!-- MOUSE -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">MOUSE</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Mouse Gamer</a></li>
+                                            <li class="link-dropdown"><a href="#">Mouse Óptico</a></li>
+                                            <li class="link-dropdown"><a href="#">Mouse Laser</a></li>
+                                            <li class="link-dropdown"><a href="#">Mouse Bungee</a></li>
+                                        </ul>  
+                                    </div>
+                                </li>
+                                <!-- SECCION CENTRO IZQUIERDA (PAD - AURICULARES) -->
+                                <li class="secc-lc">
+                                    <!-- PAD -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">PAD</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Pad Small</a></li>
+                                            <li class="link-dropdown"><a href="#">Pad Medium</a></li>
+                                            <li class="link-dropdown"><a href="#">Pad Large</a></li>
+                                            <li class="link-dropdown"><a href="#">Pad ExtraLarge</a></li>
+                                        </ul>  
+                                    </div>                                    
+                                    <!-- AURICULARES -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">AURICULARES</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Auriculares Gamer</a></li>
+                                            <li class="link-dropdown"><a href="#">Auriculares Estereo</a></li>
+                                            <li class="link-dropdown"><a href="#">Auriculares Surround</a></li>
+                                            <li class="link-dropdown"><a href="#">Soporte de Auriculares</a></li>
+                                            <li class="link-dropdown"><a href="#">Auriculares para Celular</a></li>
+                                        </ul>  
+                                    </div>                                    
+                                </li>
+
+                                <!-- SECCION CENTRO DERECHA (JOYSTICKS - WEBCAMS - MICROFONOS - IMPRESORAS) -->
+                                <li class="secc-rc">
+                                    <!-- JOYSTICKS -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">JOYSTICKS</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Joystick</a></li>            
+                                        </ul>  
+                                    </div>  
+                                    <!-- WEBCAMS -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">WEBCAMS</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Webcams</a></li>            
+                                        </ul>  
+                                    </div>  
+                                    <!-- MICROFONOS -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">MICROFONOS</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Microfonos</a></li>            
+                                        </ul>  
+                                    </div>  
+                                    <!-- IMPRESORAS -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">IMPRESORAS</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Impresoras Laser</a></li>            
+                                            <li class="link-dropdown"><a href="#">Resma de Hojas</a></li>            
+                                            <li class="link-dropdown"><a href="#">Tones de Impresoras</a></li>            
+                                        </ul>  
+                                    </div>  
+                                </li>
+
+                                <!-- SECCION DERECHA (MONITORES - PLACAS DE RED - PARLANTES - VOLANTES Y ACCESORIOS) -->
+                                <li class="secc-r">
+                                    <!-- MONITORES -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">MONITORES</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Monitores 165Hz</a></li>                       
+                                            <li class="link-dropdown"><a href="#">Monitores 144Hz</a></li>                       
+                                            <li class="link-dropdown"><a href="#">Monitores LED</a></li>                       
+                                        </ul>  
+                                    </div>  
+                                    <!-- PLACAS DE RED -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">PLACAS DE RED</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Placas de Red USB</a></li>                       
+                                            <li class="link-dropdown"><a href="#">Placas de Red PCIe</a></li>                                             
+                                        </ul>  
+                                    </div>  
+                                    <!-- PARLANTES -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">PARLANTES</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Parlantes</a></li>                                                                  
+                                        </ul>  
+                                    </div>  
+                                    <!-- VOLANTES Y ACCESORIOS -->
+                                    <div class="prods-secc-interna">
+                                        <h4 class="titulo-seccion-dropdown">VOLANTES Y ACCESORIOS</h4>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="#">Volantes</a></li>                                                                  
+                                            <li class="link-dropdown"><a href="#">Bases para Volante</a></li>                                                                  
+                                        </ul>  
+                                    </div>  
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>                                                        
+                <!-- FIN SECCION DROPDOWN PERIFERICOS -->           
             </ul>
         </div>
-
+        <!--   //////////////////////////// FIN MENU CATEGORIAS  ////////////////////////////-->
 
 
 
@@ -88,9 +411,9 @@
                 
 
                 <div class="session-carrito">
-                    <a href="#" class="cuenta"><i class="fas fa-user"></i><p>Mi Cuenta</p></a>
+                    <a href="#" class="cuenta"><i class="fas fa-user"></i></a>
                     <a href="#" class="search-mobile-button"><i class="fas fa-search 1"></i></a>
-                    <a href="#" class="carrito"><i class="fas fa-cart-plus"></i></i><p>(0) $0.00</p><i class="fas fa-caret-down"></i></a>                
+                    <a href="#" class="carrito"><i class="fas fa-cart-plus"></i></i><i class="fas fa-caret-down"></i></a>                
                 </div>
             </div>
 
