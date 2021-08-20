@@ -143,25 +143,13 @@ categorias.forEach(cat => {
             catsSecundarias[categorias.indexOf(cat)].children[0].classList.remove(none)
             catsSecundarias[categorias.indexOf(cat)].children[1].classList.remove(none)
         }  
-        /* catsSecundarias[categorias.indexOf(cat)].addEventListener('mouseover', () => {
-            catsSecundarias[categorias.indexOf(cat)].addEventListener('mouseout', () => {
-                setTimeout(() => {
-                    agregarNone()
-                }, 10000);
-            })
-        }) */
 
-        /* main.addEventListener('mouseover', () => {
-            setTimeout(() => {
-                agregarNone()
-            }, 1000);
-        }) */
     })
 })
 
 function agregarNone(){
     categorias.forEach(cat => {
-
+        
         if(!catsSecundarias[categorias.indexOf(cat)].classList.contains(none)){
             catsSecundarias[categorias.indexOf(cat)].classList.add(none)
             cat.children[0].classList.remove(catActual)
@@ -183,7 +171,12 @@ hamburguesaWeb.addEventListener('click', () => {
     sidebarMenuWeb.classList.add(sidebarActive)
     hamburguesaWeb.classList.add(hamburgerWebInactive)
     cruzWeb.classList.remove(none)
-
+    
+    opacityDiv.addEventListener('mouseover', () => {
+        setTimeout(() => {
+            agregarNone()
+        }, 1000);
+    })
     cruzWeb.addEventListener('click', () => {
         sidebarMenuWeb.classList.remove(sidebarActive)
         hamburguesaWeb.classList.remove(hamburgerWebInactive)
