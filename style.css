@@ -40,9 +40,15 @@ header{
     align-items: center;
     margin: 0 auto;
     position: fixed;
+    
     top: 0;
-    z-index: 3s;
+    z-index: 99;
     border-bottom: 1.5px solid var(--maximus-green);
+}
+.filler-header{
+    width: 100%;
+    height: 120px;
+    z-index: 0;
 }
 
 ul{
@@ -50,7 +56,7 @@ ul{
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 .container{
     width: 95%;
@@ -62,6 +68,7 @@ a{
     height: 10px;
     width: 100%;
     background-color: #555;
+    z-index: 98;
 }
 
 .links a{
@@ -85,6 +92,7 @@ a{
     width: 100%;
     padding: 1rem 0;
     margin-bottom: 5px;
+    z-index: 98;
 }
 
 .header-bottom{
@@ -298,9 +306,10 @@ a{
     height: auto;
     background-color: black;
     position: absolute;
-    top: 120px;
+    top: 110px;
     transform: translateX(-100%);
     transition: ease-in-out 0.3s;
+    z-index: 99;
 }
 
 .menu-categorias-active{
@@ -611,6 +620,7 @@ a{
     }
     
     .search-input{
+        margin: 0;
         font-size: 16px;
         width: 100%;
         letter-spacing: .5px !important;
@@ -620,6 +630,7 @@ a{
     .header-top .search-web form input{
         border: none;
         width: 100%;
+        margin-bottom: 0 !important;
     }
     
     .header-top .search-web form input:focus{
@@ -779,6 +790,9 @@ a{
 
 
     /*********  MENU CATEGORIAS WEB *************/
+    aside{
+        z-index: 99;
+    }
 
     .hamburger-web-inactive{
         display: none;
@@ -947,8 +961,3 @@ a{
     
 }
 
-.main{
-    width: 100%;
-    height: 100vh;
-    background-color: white;
-}
