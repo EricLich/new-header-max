@@ -49,6 +49,7 @@ const flex = "flex";
 const menuCategorias = document.querySelector('.menu-categorias');
 const menuCatActive = "menu-categorias-active"
 
+
 menu.addEventListener('click', () => {
     if(!cruz.classList.contains(claseCruzActiva)){
         cruz.classList.add(claseCruzActiva);
@@ -93,28 +94,21 @@ cruz.addEventListener('click', () => {
 
 
 //MOSTRAR Y OCULTAR DROPDOWNS DE CATEGORIAS EN MOBILE Y WEB
-const opacityDiv = document.querySelector('.opacidad-menu')
-const block = 'block'
 const showOrHide = (element) => {
     const ulDropDown = element.parentElement.children[1];
     const plus = element.children[1].children[0];
     const minus = element.children[1].children[1];
 
     if(ulDropDown.classList.contains(none)){
-        opacityDiv.classList.remove(none)
-        opacityDiv.classList.add(block)
         ulDropDown.classList.remove(none);
         ulDropDown.classList.add(flex)
         plus.classList.add(none)
         minus.classList.remove(none)
     }else{
-        opacityDiv.classList.add(none)
-        opacityDiv.classList.remove(block)
         ulDropDown.classList.remove(flex)
         ulDropDown.classList.add(none)
         plus.classList.remove(none)
         minus.classList.add(none)
-        opacityDiv.classList.add(none)
     }
 }
 
@@ -183,8 +177,9 @@ function agregarNone(){
 }
 
 
-
+const opacityDiv = document.querySelector('.opacidad-menu')
 hamburguesaWeb.addEventListener('click', () => {
+    opacityDiv.classList.remove(none);
     sidebarMenuWeb.classList.add(sidebarActive)
     hamburguesaWeb.classList.add(hamburgerWebInactive)
     cruzWeb.classList.remove(none)
@@ -193,6 +188,7 @@ hamburguesaWeb.addEventListener('click', () => {
         sidebarMenuWeb.classList.remove(sidebarActive)
         hamburguesaWeb.classList.remove(hamburgerWebInactive)
         cruzWeb.classList.add(none)
+        opacityDiv.classList.add(none)
     })
 })
 
