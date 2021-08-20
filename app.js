@@ -11,6 +11,7 @@ buttonCarrito.addEventListener('click', () => {
     }
 })
 //animacion de search mobile
+let main = document.querySelector(".main")
 const buttonSearch = document.querySelector(".search-mobile-button");
 buttonSearch.addEventListener('click', () =>{
     let searchMobile = document.querySelector(".search-mobile");
@@ -18,7 +19,6 @@ buttonSearch.addEventListener('click', () =>{
     let claseActiveCarrito = "carrito-drop-active"
 
     let mainBlurred = "main-blurred"
-    let main = document.querySelector(".main")
     let flechaGuardarBusqueda = document.querySelector(".guardar-search-mobile")
     
     if(!searchMobile.classList.contains(claseActive)){
@@ -92,7 +92,7 @@ cruz.addEventListener('click', () => {
 })
 
 
-//MOSTRAR Y OCULTAR DROPDOWNS DE CATEGORIAS
+//MOSTRAR Y OCULTAR DROPDOWNS DE CATEGORIAS EN MOBILE Y WEB
 const showOrHide = (element) => {
     const ulDropDown = element.parentElement.children[1];
     const plus = element.children[1].children[0];
@@ -109,5 +109,83 @@ const showOrHide = (element) => {
         plus.classList.remove(none)
         minus.classList.add(none)
     }
-
 }
+
+//MOSTRAR Y OCULTAR BARRA DE CATEGORIAS EN WEB Y MOSTRAR SUB CATEGORIAS
+
+////////// CLASES CAT PRINCIPAL
+const categoriasWeb = document.querySelector('.categorias-web');
+const categoriasWebActive = "menu-categorias-active-web";
+const hamburgerWebInactive = "hamburger-web-inactive"
+const hamburguesaWeb = categoriasWeb.children[0];
+const cruzWeb = categoriasWeb.children[1];
+const cruzWebActive = document.querySelector('.cruz-menu-web-active');
+
+const sidebarMenuWeb = document.querySelector('.sidebar-menu-web')
+const sidebarActive = 'sidebar-menu-web-active'
+const columnaSide = 'columna-side'
+
+/////////// CLASES CAT SECUNDARIA 
+const categorias = [...document.querySelectorAll('.apertura-cat-principal')];
+const catsSecundarias = [...document.querySelectorAll('.cats-secundarias-sidebar')]
+const catsSidebar = [...document.querySelectorAll('.categorias-sidebar')]
+const catActual = 'cat-actual'
+
+categorias.forEach(cat => {
+    cat.addEventListener('mouseover', () => {
+        agregarNone() // le agrega la clase none si algun submenu esta abierto antes de abrir el que se quiera abrir 
+        if(catsSecundarias[categorias.indexOf(cat)].classList.contains(none)){
+            catsSecundarias[categorias.indexOf(cat)].classList.remove(none)
+            cat.children[0].classList.add(catActual)
+        }
+        if(catsSecundarias[categorias.indexOf(cat)].children[0].classList.contains(none)){
+            catsSecundarias[categorias.indexOf(cat)].children[0].classList.remove(none)
+            catsSecundarias[categorias.indexOf(cat)].children[1].classList.remove(none)
+        }  
+        /* catsSecundarias[categorias.indexOf(cat)].addEventListener('mouseover', () => {
+            catsSecundarias[categorias.indexOf(cat)].addEventListener('mouseout', () => {
+                setTimeout(() => {
+                    agregarNone()
+                }, 10000);
+            })
+        }) */
+
+        main.addEventListener('mouseover', () => {
+            setTimeout(() => {
+                agregarNone()
+            }, 1000);
+        })
+    })
+})
+
+function agregarNone(){
+    categorias.forEach(cat => {
+
+        if(!catsSecundarias[categorias.indexOf(cat)].classList.contains(none)){
+            catsSecundarias[categorias.indexOf(cat)].classList.add(none)
+            cat.children[0].classList.remove(catActual)
+        }
+        if(catsSecundarias[categorias.indexOf(cat)].children[0] && catsSecundarias[categorias.indexOf(cat)].children[1]){
+            if(!catsSecundarias[categorias.indexOf(cat)].children[0].classList.contains(none)){
+                catsSecundarias[categorias.indexOf(cat)].children[0].classList.add(none)
+                catsSecundarias[categorias.indexOf(cat)].children[1].classList.add(none)
+                cat.children[0].classList.remove(catActual)
+            }
+        }
+    })
+}
+
+
+
+hamburguesaWeb.addEventListener('click', () => {
+    sidebarMenuWeb.classList.add(sidebarActive)
+    hamburguesaWeb.classList.add(hamburgerWebInactive)
+    cruzWeb.classList.remove(none)
+
+    cruzWeb.addEventListener('click', () => {
+        sidebarMenuWeb.classList.remove(sidebarActive)
+        hamburguesaWeb.classList.remove(hamburgerWebInactive)
+        cruzWeb.classList.add(none)
+    })
+})
+

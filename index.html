@@ -21,8 +21,8 @@
     <header>
         <div class="links">
             <a href="#" class="comprobante"><i class="far fa-file" ></i> Subir Comprobantes</a>
-            <a href="#"  class="rma"><i class="far fa-file"></i> RMA - Garantia</a>
-            <a href="#" class="ayuda"><i class="fas fa-question-circle"></i></i> Ayuda</a>
+            <a href="https://www.maximus.com.ar/rma/garantia/maximus.aspx"  class="rma"><i class="far fa-file"></i> RMA - Garantia</a>
+            <a href="https://www.maximus.com.ar/AYUDA1/centro-de-ayuda/maximus.aspx" class="ayuda"><i class="fas fa-question-circle"></i></i> Ayuda</a>
         </div>
         <!-- search para mobile -->
         <div class="search-mobile">
@@ -39,353 +39,664 @@
                     <h3>Su pedido</h3>
                     <p>Cantidad de Items 0 ($ 0,00)</p>
                 </div>
-                <button>VER</button>
+                <a href="https://www.maximus.com.ar/CHECKOUTresumen/mycart/maximus.aspx">VER</a>
             </div>
         </div>
 
-        <!-- //////////////////////   MENU CATEGORIAS   //////////////////////////// -->
+        <!-- //////////////////////   MENU CATEGORIAS MOBILE  //////////////////////////// -->
         <div class="menu-categorias">
             <ul class="categorias">
-                <li class="categoria"><a class="notebooks-link" href="#">NOTEBOOKS</a></li>
+                <li class="categoria"><a class="notebooks-link" href="https://www.maximus.com.ar/ARTICULOS/Notebooks/CAT_ID=56/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/maximus.aspx"><i class="fas fa-laptop"></i> NOTEBOOKS</a></li>
                 <!-- SECCION ARMA TU PC -->
-                <li class="categoria">
-                    <a href="#" class="arma-tu-pc">ARMA TU PC</a>
+                <li class="categoria arma-pc">
+                    <a href="https://www.maximus.com.ar/armarpc/armar-pc/maximus.aspx" class="arma-tu-pc"><i class="fas fa-server"></i> ARMA TU PC</a>
                 </li>
                 <!-- FIN SECCION ARMA TU PC -->
 
                 <!-- SECCION ARMA TU COMBO -->
-                <li class="categoria">
-                    <a href="#" class="arma-tu-combo">ARMA TU COMBO</a>
+                <li class="categoria arma-combo">
+                    <a href="https://www.maximus.com.ar/combopc/combo-pc/maximus.aspx" class="arma-tu-combo"><i class="fas fa-box-open"></i> ARMA TU COMBO</a>
                 </li>
                 <!-- FIN SECCION ARMA TU COMBO -->
 
-                <!-- SECCION DROPDOWN PRODUCOS -->
+                <!-- SECCION DROPDOWN COMPONENTES DE PC -->
                 <li class="menu-productos-dropdown categoria" >
                     <div class="drop">
-                        <div class="dropdown-productos">
+                        <div class="dropdown-productos"> <!-- COMPONENTES DE PC -->
                             <div class="dropdown-name-buttons" onclick="showOrHide(this)">
-                                <p>PRODUCTOS</p>
+                                <p><i class="fas fa-server"></i> COMPONENTES DE PC</p>
                                 <div class="botones-drop-menu-cat">
+                                    <!-- BOTONES MOBILE -->
                                     <i class="fas fa-plus"></i>
                                     <i class="fas fa-minus none"></i>
                                 </div>
                             </div>
-                            <ul class="prods-dropdown none"> <!-- 4 secciones L LC RC R-->                                
-                                <!-- SECCION IZQUIERDA (MICROS - MOTHERS - RAM - GPUS)   -->
+                            <ul class="prods-dropdown productos-menu none"> <!-- 4 secciones L LC RC R-->                                
                                 <li class="secc-l">
                                     <!-- PROCESADORES -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">MICROPROCESADORES</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-microchip"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Microprocesador/CAT_ID=52/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="titulo-seccion-dropdown">MICROPROCESADORES</a>                                            
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Socket AMD AM4</a></li>
-                                            <li class="link-dropdown"><a href="#">Socket Intel 1151</a></li>
-                                            <li class="link-dropdown"><a href="#">Socket Intel 1200</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Socket-AMD-AM4/CAT_ID=52/SCAT_ID=3898/SCA_ID=-1/m=132/OR=1/maximus.aspx">Socket AMD AM4</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Socket-Intel-1151/CAT_ID=52/SCAT_ID=3893/SCA_ID=-1/m=133/OR=1/maximus.aspx">Socket Intel 1151</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Socket-Intel-1200/CAT_ID=52/SCAT_ID=3956/SCA_ID=-1/m=133/OR=1/maximus.aspx">Socket Intel 1200</a></li>
                                         </ul>  
                                     </div>
                                     <!-- MOTHERBOARDS -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">MOTHERBOARDS</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-sd-card"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Motherboards/CAT_ID=47/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="titulo-seccion-dropdown">MOTHERBOARDS</a href="https://www.maximus.com.ar/ARTICULOS/Motherboards/CAT_ID=47/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx">
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Mother AMD AM4</a></li>
-                                            <li class="link-dropdown"><a href="#">Mother Intel 1151</a></li>
-                                            <li class="link-dropdown"><a href="#">Mother Intel 1200</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Mother-AMD-AM4/CAT_ID=47/SCAT_ID=3899/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx">Mother AMD AM4</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Mother-Intel-1151/CAT_ID=47/SCAT_ID=3894/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx">Mother Intel 1151</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Mother-Intel-1200/CAT_ID=47/SCAT_ID=3955/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx">Mother Intel 1200</a></li>
                                         </ul>
                                     </div>
                                     <!-- RAM -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">MEMORIAS RAM</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-memory"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Memorias-RAM/CAT_ID=50/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="titulo-seccion-dropdown">MEMORIAS RAM</a href="">
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Memorias Para PC (UDIMM)</a></li>
-                                            <li class="link-dropdown"><a href="#">Memorias Para Notebook (SODIMM)</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Memorias-Para-PC/CAT_ID=50/SCAT_ID=3828/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Memorias Para PC (UDIMM)</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Memorias-Para-Notebook/CAT_ID=50/SCAT_ID=3870/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Memorias Para Notebook (SODIMM)</a></li>
                                         </ul>
                                     </div>
                                     <!-- PLACAS DE VIDEO -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">PLACAS DE VIDEO</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-gamepad"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Placas-de-Video/CAT_ID=48/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="titulo-seccion-dropdown">PLACAS DE VIDEO</a>
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Placa de video AMD Radeon</a></li>
-                                            <li class="link-dropdown"><a href="#">Placa de Video Nvidia</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Placas-de-Video-AMD/CAT_ID=48/SCAT_ID=3826/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Placa de video AMD Radeon</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Placas-de-Video-Nvidia/CAT_ID=48/SCAT_ID=3908/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Placa de Video Nvidia</a></li>
                                         </ul>
                                     </div>
-                                </li>                                
-                                <!-- SECCION CENTRO IZQUIERDA (ALMACENAMIENTO - REFRIGERACION - TELEVISORES)  -->
-                                <li class="secc-lc">
                                     <!-- ALMACENAMIENTO -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">ALMACENAMIENTO</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-hdd"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Discos/CAT_ID=53/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="titulo-seccion-dropdown">ALMACENAMIENTO</a>
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Discos Externos USB</a></li>
-                                            <li class="link-dropdown"><a href="#">Discos Rígidos HDD para Notebook</a></li>
-                                            <li class="link-dropdown"><a href="#">Discos Rígidos HDD para PC</a></li>
-                                            <li class="link-dropdown"><a href="#">Discos Sólidos SSD Internos</a></li>
-                                            <li class="link-dropdown"><a href="#">Memorias SD - Pendrives</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Discos-Externos-USB/CAT_ID=53/SCAT_ID=3832/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Discos Externos USB</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Discos-Internos-HDD-Para-Notebook/CAT_ID=53/SCAT_ID=3835/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Discos Rígidos HDD para Notebook</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Discos-Internos-HDD-Para-PC/CAT_ID=53/SCAT_ID=3831/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Discos Rígidos HDD para PC</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Discos-Solidos-SSD-Internos/CAT_ID=53/SCAT_ID=3838/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Discos Sólidos SSD Internos</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Memorias-SD-Y-Pendrives/CAT_ID=53/SCAT_ID=3979/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Memorias SD - Pendrives</a></li>
                                         </ul>  
                                     </div>
+                                    
+                                </li>   
 
-                                    <!-- REFRIGERACION -->
+                                <li class="secc-r">
+                                 <!-- REFRIGERACION -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">REFRIGERACION</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-snowflake"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Refrigeracion/CAT_ID=2/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="titulo-seccion-dropdown">REFRIGERACION</a>
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Air Cooling</a></li>
-                                            <li class="link-dropdown"><a href="#">Water Cooling</a></li>
-                                            <li class="link-dropdown"><a href="#">Pasta Térmica</a></li>
-                                            <li class="link-dropdown"><a href="#">Fan 120mm</a></li>
-                                            <li class="link-dropdown"><a href="#">Fan 140mm</a></li>
-                                            <li class="link-dropdown"><a href="#">Accesorios</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Disipadores-Por-Aire/CAT_ID=2/SCAT_ID=7/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Air Cooling</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Watercoolers/CAT_ID=2/SCAT_ID=3900/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Water Cooling</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Pasta-Termica/CAT_ID=2/SCAT_ID=3902/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Pasta Térmica</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Ventilador-120MM/CAT_ID=2/SCAT_ID=3981/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Fan 120mm</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Ventilador-140MM/CAT_ID=2/SCAT_ID=3982/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Fan 140mm</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Accesorios-Refrigeracion/CAT_ID=2/SCAT_ID=3944/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Accesorios</a></li>
                                         </ul>  
                                     </div>
-
-                                    <!-- TELEVISORES -->
-                                    <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">TELEVISORES</h4>
-                                        <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Smart TV</a></li>
-                                        </ul>  
-                                    </div>
-                                </li>                                
-                                <!-- SECCION CENTRO DERECHA  (FUENTES - GABINETES - SILLAS - TABLETS)   -->
-                                <li class="secc-rc">
                                     <!-- FUENTES -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">FUENTES</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-car-battery"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Fuentes/CAT_ID=7/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="titulo-seccion-dropdown">FUENTES</a>
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Sin Certificado</a></li>
-                                            <li class="link-dropdown"><a href="#">80 Plus White</a></li>
-                                            <li class="link-dropdown"><a href="#">80 Plus Bronce</a></li>
-                                            <li class="link-dropdown"><a href="#">80 Plus Gold</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Fuentes-Genericas/CAT_ID=7/SCAT_ID=3965/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Sin Certificado</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Fuentes-80-Plus-White/CAT_ID=7/SCAT_ID=3968/SCA_ID=-1/m=-1/OR=1/maximus.aspx">80 Plus White</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Fuentes-80-Plus-Bronce/CAT_ID=7/SCAT_ID=3966/SCA_ID=-1/m=-1/OR=1/maximus.aspx">80 Plus Bronce</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Fuentes-80-Plus-Gold/CAT_ID=7/SCAT_ID=3967/SCA_ID=-1/m=-1/OR=1/maximus.aspx">80 Plus Gold</a></li>
                                         </ul>  
                                     </div>
 
                                     <!-- GABINETES -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">GABINETES</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-box"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Gabinetes/CAT_ID=1/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="titulo-seccion-dropdown">GABINETES</a>
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Full Tower</a></li>
-                                            <li class="link-dropdown"><a href="#">Mid Tower</a></li>
-                                            <li class="link-dropdown"><a href="#">Mini Tower</a></li>
-                                        </ul>  
-                                    </div>
-
-                                    <!-- SILLAS -->
-                                    <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">SILLAS</h4>
-                                        <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Sillas Gamer</a></li>                                    
-                                        </ul>  
-                                    </div>
-                                    
-                                    <!-- TABLETS -->
-                                    <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">TABLETS</h4>
-                                        <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Tablets Digitalizadoras</a></li>                                    
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Gabinetes-Full-Tower/CAT_ID=1/SCAT_ID=1/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Full Tower</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Gabinetes-Mid-Tower/CAT_ID=1/SCAT_ID=2/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Mid Tower</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Gabinetes-Mini-Tower/CAT_ID=1/SCAT_ID=3909/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Mini Tower</a></li>
                                         </ul>  
                                     </div>
                                 </li>
-                                <!-- SECCION DERECHA  (ACCESORIOS - SO - CAPTURADORAS - SMARTWATCH/BAND - PEQUEÑOS ELECTRO) -->
-                                <li class="secc-rc">
-                                    <!-- ACCESORIOS -->
-                                    <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">ACCESORIOS</h4>
-                                        <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Soportes de GPU</a></li>                                    
-                                            <li class="link-dropdown"><a href="#">Cables Mallados</a></li>                                    
-                                            <li class="link-dropdown"><a href="#">Tiras LED</a></li>                                    
-                                            <li class="link-dropdown"><a href="#">Estabilizador y UPS</a></li>                                    
-                                            <li class="link-dropdown"><a href="#">Routers</a></li>                                    
-                                            <li class="link-dropdown"><a href="#">Mochilas y Bolsos</a></li>                                    
-                                        </ul>  
-                                    </div>
-
-                                    <!-- SISTEMA OPERATIVO -->
-                                    <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">SISTEMA OPERATIVO</h4>
-                                        <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Microsoft Windows</a></li>                                                                       
-                                        </ul>  
-                                    </div>
-
-                                    <!-- CAPTURADORAS DE VIDEO -->
-                                    <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">CAPTURADORAS DE VIDEO</h4>
-                                        <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Capturadoras de Video</a></li>                                                                       
-                                        </ul>  
-                                    </div>
-
-                                    <!-- SMARTWATCH - SMARTBAND -->
-                                    <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">SMARTWATCH - SMARTBAND</h4>
-                                        <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">SmartBand</a></li>                                                                       
-                                        </ul>  
-                                    </div>
-
-                                    <!-- SMARTWATCH - SMARTBAND -->
-                                    <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">SMARTWATCH - SMARTBAND</h4>
-                                        <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">SmartBand</a></li>                                                                       
-                                        </ul>  
-                                    </div>
-
-                                    <!-- PEQUEÑOS ELECTRODOMESTICOS -->
-                                    <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">PEQUEÑOS ELECTRODOMESTICOS</h4>
-                                        <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Termometros</a></li>                                                                       
-                                            <li class="link-dropdown"><a href="#">TV Stick - TV Box</a></li>                                                                       
-                                        </ul>  
-                                    </div>
-                                </li>                                
                             </ul>
                         </div>
                     </div>                    
                 </li>
-                <!-- FIN SECCION DROPDOWN PRODUCOS -->
-                    
-                <!-- SECCION DROPDOWN PERIFERICOS -->
-                <li class="menu-productos-dropdown categoria">
-                    <div class="drop">                      
-                        <div class="dropdown-perifericos">
+                <!-- FIN SECCION DROPDOWN COMPONENTES DE PC -->
+
+                <!-- SECCION DROP MONITORES -->
+                <li class="menu-productos-dropdown categoria" >
+                    <div class="drop">
+                        <div class="dropdown-productos"> <!-- MONITORES-->
                             <div class="dropdown-name-buttons" onclick="showOrHide(this)">
-                                <p>PERIFERICOS</p> 
+                                <p><i class="fas fa-desktop"></i> MONITORES</p>
                                 <div class="botones-drop-menu-cat">
+                                    <!-- BOTONES MOBILE -->
                                     <i class="fas fa-plus"></i>
-                                    <i class="fas fa-minus none"></i>   
+                                    <i class="fas fa-minus none"></i>
                                 </div>
                             </div>
-                            <ul class="prods-dropdown none"> <!-- 4 secciones L LC RC R-->
-                                <!-- SECCION IZQUIERDA (TECLADOS - MOUSE) -->
+                            <ul class="prods-dropdown productos-menu none"> <!-- 4 secciones L LC RC R-->                                
+                                <!-- SECCION IZQUIERDA (MICROS - MOTHERS - RAM - GPUS)   -->
                                 <li class="secc-l">
-                                <!-- TECLADOS -->
+                                    <!-- MONITORES -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">TECLADOS</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-desktop"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Monitores/CAT_ID=59/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="titulo-seccion-dropdown">MONITORES</a>
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Teclados Mecánicos</a></li>
-                                            <li class="link-dropdown"><a href="#">Teclados Membrana</a></li>
-                                            <li class="link-dropdown"><a href="#">Teclados RGB</a></li>
-                                            <li class="link-dropdown"><a href="#">Combo Teclados</a></li>
-                                            <li class="link-dropdown"><a href="#">Accesorios para Teclado</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Monitores-165Hz/SCA_ID=-1/CAT_ID=59/SCAT_ID=3962/m=-1/OR=1/maximus.aspx">Monitores 165Hz</a></li>                       
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Monitores-144Hz/SCA_ID=-1/CAT_ID=59/SCAT_ID=3932/m=-1/OR=1/maximus.aspx">Monitores 144Hz</a></li>                       
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Monitores-LED/SCA_ID=-1/CAT_ID=59/SCAT_ID=3856/m=-1/OR=1/maximus.aspx">Monitores LED</a></li>                       
                                         </ul>  
                                     </div>
-                                <!-- MOUSE -->
+                                </li>                               
+                            </ul>
+                        </div>
+                    </div>                    
+                </li>
+                <!-- FIN SECCION DROP MONITORES -->
+
+                <!-- SECCION DROP PERIFERICOS -->
+                <li class="menu-productos-dropdown categoria" >
+                    <div class="drop">
+                        <div class="dropdown-productos"> <!-- MONITORES-->
+                            <div class="dropdown-name-buttons" onclick="showOrHide(this)">
+                                <p><i class="far fa-keyboard"></i> PERIFERICOS</p>
+                                <div class="botones-drop-menu-cat">
+                                    <!-- BOTONES MOBILE -->
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-minus none"></i>
+                                </div>
+                            </div>
+                            <ul class="prods-dropdown productos-menu none"> <!-- 4 secciones L LC RC R-->                                
+                                <!-- SECCION IZQUIERDA (MICROS - MOTHERS - RAM - GPUS)   -->
+                                <li class="secc-l">
+                                    <!-- TECLADOS -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">MOUSE</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-keyboard"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Teclados/CAT_ID=10/SCAT_ID=28/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="titulo-seccion-dropdown">TECLADOS</a>
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Mouse Gamer</a></li>
-                                            <li class="link-dropdown"><a href="#">Mouse Óptico</a></li>
-                                            <li class="link-dropdown"><a href="#">Mouse Laser</a></li>
-                                            <li class="link-dropdown"><a href="#">Mouse Bungee</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Teclados-Mecanicos/CAT_ID=10/SCAT_ID=28/SCA_ID=-1/m=-1/OR=1/wco=6/tv=MECANICO/maximus.aspx">Teclados Mecánicos</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Teclados-Membrana/CAT_ID=10/SCAT_ID=28/SCA_ID=-1/m=-1/OR=1/wco=6/tv=MEMBRANA/maximus.aspx">Teclados Membrana</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Teclados-RGB/CAT_ID=10/SCAT_ID=28/SCA_ID=-1/m=-1/OR=1/wco=7/tv=RGB/maximus.aspx">Teclados RGB</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Combo-Teclados/CAT_ID=10/SCAT_ID=28/SCA_ID=-1/m=-1/OR=1/wco=8/tv=COMBO/maximus.aspx">Combo Teclados</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Accesorios-para-Teclados/CAT_ID=10/SCAT_ID=28/SCA_ID=-1/OR=1/m=-1/wco=19/tv=KEYCAPS/maximus.aspx">Accesorios para Teclado</a></li>
                                         </ul>  
                                     </div>
-                                </li>
-                                <!-- SECCION CENTRO IZQUIERDA (PAD - AURICULARES) -->
-                                <li class="secc-lc">
-                                    <!-- PAD -->
+                                    <!-- MOUSE -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">PAD</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-mouse"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Mouse/CAT_ID=10/SCAT_ID=29/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="titulo-seccion-dropdown">MOUSE</a>
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Pad Small</a></li>
-                                            <li class="link-dropdown"><a href="#">Pad Medium</a></li>
-                                            <li class="link-dropdown"><a href="#">Pad Large</a></li>
-                                            <li class="link-dropdown"><a href="#">Pad ExtraLarge</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Gamer/SCA_ID=-1/CAT_ID=10/SCAT_ID=29/m=-1/OR=1/wco=10/tv=GAMERS/maximus.aspx">Mouse Gamer</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Optico/SCA_ID=-1/CAT_ID=10/SCAT_ID=29/m=-1/OR=1/wco=9/tv=OPTICO/maximus.aspx">Mouse Óptico</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Laser/SCA_ID=-1/CAT_ID=10/SCAT_ID=29/m=-1/OR=1/wco=9/tv=LASER/maximus.aspx">Mouse Laser</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Bungee/SCA_ID=-1/CAT_ID=10/SCAT_ID=29/m=-1/OR=1/wco=9/tv=BUNGEE/maximus.aspx">Mouse Bungee</a></li>
                                         </ul>  
-                                    </div>                                    
+                                    </div>
                                     <!-- AURICULARES -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">AURICULARES</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-headphones"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Auriculares/CAT_ID=10/SCAT_ID=3821/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="titulo-seccion-dropdown">AURICULARES</a>
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Auriculares Gamer</a></li>
-                                            <li class="link-dropdown"><a href="#">Auriculares Estereo</a></li>
-                                            <li class="link-dropdown"><a href="#">Auriculares Surround</a></li>
-                                            <li class="link-dropdown"><a href="#">Soporte de Auriculares</a></li>
-                                            <li class="link-dropdown"><a href="#">Auriculares para Celular</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Auriculares-Gamer/SCA_ID=-1/CAT_ID=10/SCAT_ID=3821/m=-1/OR=1/wco=12/tv=GAMERS/maximus.aspx">Auriculares Gamer</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Auriculares-Estereo/SCA_ID=-1/CAT_ID=10/SCAT_ID=3821/m=-1/OR=1/wco=11/tv=ESTEREO/maximus.aspx">Auriculares Estereo</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Auriculares-Surround/SCA_ID=-1/CAT_ID=10/SCAT_ID=3821/m=-1/OR=1/wco=11/tv=SURROUND/maximus.aspx">Auriculares Surround</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Soporte-de-Auriculares/SCA_ID=-1/CAT_ID=10/SCAT_ID=3821/m=-1/OR=1/wco=11/tv=SOPORTE/maximus.aspx">Soporte de Auriculares</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Auriculares-para-Celu%C3%B1ar/SCA_ID=-1/CAT_ID=10/SCAT_ID=3821/m=-1/OR=1/wco=12/tv=CELULAR/maximus.aspx">Auriculares para Celular</a></li>
                                         </ul>  
-                                    </div>                                    
+                                    </div> 
                                 </li>
-
-                                <!-- SECCION CENTRO DERECHA (JOYSTICKS - WEBCAMS - MICROFONOS - IMPRESORAS) -->
-                                <li class="secc-rc">
+                                <li class="secc-r">   
                                     <!-- JOYSTICKS -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">JOYSTICKS</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-gamepad"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Joystick/SCA_ID=-1/CAT_ID=10/SCAT_ID=3866/m=-1/OR=1/maximus.aspx" class="titulo-seccion-dropdown">JOYSTICKS</a>
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Joystick</a></li>            
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Joystick/SCA_ID=-1/CAT_ID=10/SCAT_ID=3866/m=-1/OR=1/maximus.aspx">Joystick</a></li>            
                                         </ul>  
                                     </div>  
                                     <!-- WEBCAMS -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">WEBCAMS</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-video"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Webcam/CAT_ID=10/SCAT_ID=3970/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="titulo-seccion-dropdown">WEBCAMS</a>
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Webcams</a></li>            
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Webcam/CAT_ID=10/SCAT_ID=3970/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Webcams</a></li>            
                                         </ul>  
                                     </div>  
                                     <!-- MICROFONOS -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">MICROFONOS</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-microphone"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Microfonos/CAT_ID=10/SCAT_ID=3953/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="titulo-seccion-dropdown">MICROFONOS</a>
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Microfonos</a></li>            
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Microfonos/CAT_ID=10/SCAT_ID=3953/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Microfonos</a></li>            
                                         </ul>  
-                                    </div>  
-                                    <!-- IMPRESORAS -->
-                                    <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">IMPRESORAS</h4>
-                                        <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Impresoras Laser</a></li>            
-                                            <li class="link-dropdown"><a href="#">Resma de Hojas</a></li>            
-                                            <li class="link-dropdown"><a href="#">Tones de Impresoras</a></li>            
-                                        </ul>  
-                                    </div>  
-                                </li>
-
-                                <!-- SECCION DERECHA (MONITORES - PLACAS DE RED - PARLANTES - VOLANTES Y ACCESORIOS) -->
-                                <li class="secc-r">
-                                    <!-- MONITORES -->
-                                    <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">MONITORES</h4>
-                                        <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Monitores 165Hz</a></li>                       
-                                            <li class="link-dropdown"><a href="#">Monitores 144Hz</a></li>                       
-                                            <li class="link-dropdown"><a href="#">Monitores LED</a></li>                       
-                                        </ul>  
-                                    </div>  
-                                    <!-- PLACAS DE RED -->
-                                    <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">PLACAS DE RED</h4>
-                                        <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Placas de Red USB</a></li>                       
-                                            <li class="link-dropdown"><a href="#">Placas de Red PCIe</a></li>                                             
-                                        </ul>  
-                                    </div>  
+                                    </div>
                                     <!-- PARLANTES -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">PARLANTES</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-volume-up"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Parlantes/SCA_ID=-1/CAT_ID=10/SCAT_ID=3847/m=-1/OR=1/maximus.aspx" class="titulo-seccion-dropdown">PARLANTES</a>
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Parlantes</a></li>                                                                  
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Parlantes/SCA_ID=-1/CAT_ID=10/SCAT_ID=3847/m=-1/OR=1/maximus.aspx">Parlantes</a></li>                                                                  
                                         </ul>  
                                     </div>  
                                     <!-- VOLANTES Y ACCESORIOS -->
                                     <div class="prods-secc-interna">
-                                        <h4 class="titulo-seccion-dropdown">VOLANTES Y ACCESORIOS</h4>
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-dharmachakra"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Volantes/SCA_ID=-1/CAT_ID=10/SCAT_ID=3977/m=-1/OR=1/maximus.aspx" class="titulo-seccion-dropdown">VOLANTES Y ACCESORIOS</a>
+                                        </div>
                                         <ul class="lista-seccion-dropdown">
-                                            <li class="link-dropdown"><a href="#">Volantes</a></li>                                                                  
-                                            <li class="link-dropdown"><a href="#">Bases para Volante</a></li>                                                                  
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Volantes/SCA_ID=-1/CAT_ID=10/SCAT_ID=3977/m=-1/OR=1/maximus.aspx">Volantes</a></li>                                                                  
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Base-Volante/SCA_ID=-1/CAT_ID=83/SCAT_ID=3978/m=-1/OR=1/maximus.aspx">Bases para Volante</a></li>                                                                  
                                         </ul>  
-                                    </div>  
-                                </li>
+                                    </div> 
+                                </li>                               
                             </ul>
                         </div>
-                    </div>
-                </li>                                                        
-                <!-- FIN SECCION DROPDOWN PERIFERICOS -->           
+                    </div>                    
+                </li>
+                <!-- FIN SECCION DROP PERIFERICOS -->
+
+                <!-- SECCION DROP OS -->
+                <li class="menu-productos-dropdown categoria" >
+                    <div class="drop">
+                        <div class="dropdown-productos"> <!-- MONITORES-->
+                            <div class="dropdown-name-buttons" onclick="showOrHide(this)">
+                                <p><i class="fab fa-windows"></i> SISTEMA OPERATIVO</p>
+                                <div class="botones-drop-menu-cat">
+                                    <!-- BOTONES MOBILE -->
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-minus none"></i>
+                                </div>
+                            </div>
+                            <ul class="prods-dropdown productos-menu none"> <!-- 4 secciones L LC RC R-->                                
+                                <!-- SECCION IZQUIERDA (MICROS - MOTHERS - RAM - GPUS)   -->
+                                <li class="secc-l">
+                                    <!-- SISTEMA OPERATIVO -->
+                                    <div class="prods-secc-interna">
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fab fa-windows"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Windows/SCA_ID=-1/CAT_ID=60/SCAT_ID=3869/m=-1/OR=1/maximus.aspx" class="titulo-seccion-dropdown">SISTEMA OPERATIVO</a>
+                                        </div>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Windows/SCA_ID=-1/CAT_ID=60/SCAT_ID=3869/m=-1/OR=1/maximus.aspx">Microsoft Windows</a></li>                                                                       
+                                        </ul>  
+                                    </div>
+                                </li>                               
+                            </ul>
+                        </div>
+                    </div>                    
+                </li>
+                <!-- FIN SECCION DROP OS -->
+
+                <!-- SECCION DROP CAPTURADORAS DE VIDEO -->
+                <li class="menu-productos-dropdown categoria" >
+                    <div class="drop">
+                        <div class="dropdown-productos"> <!-- MONITORES-->
+                            <div class="dropdown-name-buttons" onclick="showOrHide(this)">
+                                <p><i class="fas fa-file-video"></i> CAPTURADORAS DE VIDEO</p>
+                                <div class="botones-drop-menu-cat">
+                                    <!-- BOTONES MOBILE -->
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-minus none"></i>
+                                </div>
+                            </div>
+                            <ul class="prods-dropdown productos-menu none"> <!-- 4 secciones L LC RC R-->                                
+                                <!-- SECCION IZQUIERDA (MICROS - MOTHERS - RAM - GPUS)   -->
+                                <li class="secc-l">
+                                    <!-- CAPTURADORAS DE VIDEO -->
+                                    <div class="prods-secc-interna">
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-file-video"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Capturadoras-de-Video/SCA_ID=-1/CAT_ID=80/SCAT_ID=3958/m=-1/OR=1/maximus.aspx" class="titulo-seccion-dropdown">CAPTURADORAS DE VIDEO</a>
+                                        </div>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Capturadoras-de-Video/SCA_ID=-1/CAT_ID=80/SCAT_ID=3958/m=-1/OR=1/maximus.aspx">Capturadoras de Video</a></li>                                                                       
+                                        </ul>  
+                                    </div>
+                                </li>                               
+                            </ul>
+                        </div>
+                    </div>                    
+                </li>
+                <!-- FIN SECCION CAPTURADORAS DE VIDEO -->
+
+                <!-- SECCION DROP TABLETS -->
+                <li class="menu-productos-dropdown categoria" >
+                    <div class="drop">
+                        <div class="dropdown-productos"> <!-- MONITORES-->
+                            <div class="dropdown-name-buttons" onclick="showOrHide(this)">
+                                <p><i class="fas fa-tablet"></i> TABLETS</p>
+                                <div class="botones-drop-menu-cat">
+                                    <!-- BOTONES MOBILE -->
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-minus none"></i>
+                                </div>
+                            </div>
+                            <ul class="prods-dropdown productos-menu none"> <!-- 4 secciones L LC RC R-->                                
+                                <li class="secc-l">
+                                    <!-- TABLETS -->
+                                    <div class="prods-secc-interna">
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-tablet"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Tablets/CAT_ID=79/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="titulo-seccion-dropdown">TABLETS</a>
+                                        </div>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Tabletas-Digitalizadoras/CAT_ID=79/SCAT_ID=3973/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Tablets Digitalizadoras</a></li>                                    
+                                        </ul>  
+                                    </div>
+                                </li>                               
+                            </ul>
+                        </div>
+                    </div>                    
+                </li>
+                <!-- FIN SECCION TABLETS -->
+
+                <!-- SECCION DROP PLACAS DE RED -->
+                <li class="menu-productos-dropdown categoria" >
+                    <div class="drop">
+                        <div class="dropdown-productos"> <!-- MONITORES-->
+                            <div class="dropdown-name-buttons" onclick="showOrHide(this)">
+                                <p><i class="fas fa-network-wired"></i> PLACAS DE RED</p>
+                                <div class="botones-drop-menu-cat">
+                                    <!-- BOTONES MOBILE -->
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-minus none"></i>
+                                </div>
+                            </div>
+                            <ul class="prods-dropdown productos-menu none"> <!-- 4 secciones L LC RC R-->                                
+                                <li class="secc-l">
+                                    <!-- PLACAS DE RED -->
+                                    <div class="prods-secc-interna">
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-network-wired"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Placas-de-Red/CAT_ID=14/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="titulo-seccion-dropdown">PLACAS DE RED</a>
+                                        </div>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Placas-de-Red-USB/SCA_ID=-1/CAT_ID=14/SCAT_ID=3862/m=-1/OR=1/maximus.aspx">Placas de Red USB</a></li>                       
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Placas-de-Red-PCIe/SCA_ID=-1/CAT_ID=14/SCAT_ID=3863/m=-1/OR=1/maximus.aspx">Placas de Red PCIe</a></li>                                             
+                                        </ul>  
+                                    </div> 
+                                </li>                               
+                            </ul>
+                        </div>
+                    </div>                    
+                </li>
+                <!-- FIN SECCION PLACAS DE RED -->
+
+                <!-- SECCION DROP IMPRESORAS -->
+                <li class="menu-productos-dropdown categoria" >
+                    <div class="drop">
+                        <div class="dropdown-productos">
+                            <div class="dropdown-name-buttons" onclick="showOrHide(this)">
+                                <p><i class="fas fa-print"></i> IMPRESORAS</p>
+                                <div class="botones-drop-menu-cat">
+                                    <!-- BOTONES MOBILE -->
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-minus none"></i>
+                                </div>
+                            </div>
+                            <ul class="prods-dropdown productos-menu none"> <!-- 4 secciones L LC RC R-->                                
+                                <li class="secc-l">
+                                    <!-- IMPRESORAS -->
+                                    <div class="prods-secc-interna">
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-print"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Impresoras/SCA_ID=-1/CAT_ID=57/SCAT_ID=-1/m=-1/OR=1/maximus.aspx" class="titulo-seccion-dropdown">IMPRESORAS</a>
+                                        </div>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Impresoras-Laser/SCA_ID=-1/CAT_ID=57/SCAT_ID=3853/m=-1/OR=1/maximus.aspx">Impresoras Laser</a></li>            
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Resma-Hojas/CAT_ID=57/SCAT_ID=3971/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Resma de Hojas</a></li>            
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Toner-Impresora/CAT_ID=57/SCAT_ID=3854/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Tones de Impresoras</a></li>            
+                                        </ul>  
+                                    </div> 
+                                </li>                               
+                            </ul>
+                        </div>
+                    </div>                    
+                </li>
+                <!-- FIN SECCION IMPRESORAS -->
+
+                <!-- SECCION DROP PAD -->
+                <li class="menu-productos-dropdown categoria" >
+                    <div class="drop">
+                        <div class="dropdown-productos">
+                            <div class="dropdown-name-buttons" onclick="showOrHide(this)">
+                                <p><i class="fas fa-square"></i> PAD</p>
+                                <div class="botones-drop-menu-cat">
+                                    <!-- BOTONES MOBILE -->
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-minus none"></i>
+                                </div>
+                            </div>
+                            <ul class="prods-dropdown productos-menu none"> <!-- 4 secciones L LC RC R-->                                
+                                <li class="secc-l">
+                                    <!-- PAD -->
+                                    <div class="prods-secc-interna">
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-square"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Pad/CAT_ID=10/SCAT_ID=3980/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="titulo-seccion-dropdown">PADS</a>
+                                        </div>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Pad-S/SCA_ID=-1/CAT_ID=10/SCAT_ID=3980/m=-1/OR=1/wco=13/tv=S/maximus.aspx">Pad Small</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Pad-M/SCA_ID=-1/CAT_ID=10/SCAT_ID=3980/m=-1/OR=1/wco=13/tv=M/maximus.aspx">Pad Medium</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Pad-L/SCA_ID=-1/CAT_ID=10/SCAT_ID=3980/m=-1/OR=1/wco=13/tv=L/maximus.aspx">Pad Large</a></li>
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Pad-XL/SCA_ID=-1/CAT_ID=10/SCAT_ID=3980/m=-1/OR=1/wco=13/tv=XL/maximus.aspx">Pad ExtraLarge</a></li>
+                                        </ul>  
+                                    </div> 
+                                </li>                               
+                            </ul>
+                        </div>
+                    </div>                    
+                </li>
+                <!-- FIN SECCION PAD -->
+
+                <!-- SECCION DROP TELEVISORES -->
+                <li class="menu-productos-dropdown categoria" >
+                    <div class="drop">
+                        <div class="dropdown-productos">
+                            <div class="dropdown-name-buttons" onclick="showOrHide(this)">
+                                <p><i class="fas fa-tv"></i> TELEVISORES</p>
+                                <div class="botones-drop-menu-cat">
+                                    <!-- BOTONES MOBILE -->
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-minus none"></i>
+                                </div>
+                            </div>
+                            <ul class="prods-dropdown productos-menu none"> <!-- 4 secciones L LC RC R-->                                
+                                <li class="secc-l">
+                                    <!-- TELEVISORES -->
+                                    <div class="prods-secc-interna">
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-tv"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Smart-TV/CAT_ID=85/SCAT_ID=3976/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="titulo-seccion-dropdown">TELEVISORES</a>
+                                        </div>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Smart-TV/CAT_ID=85/SCAT_ID=3976/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Smart TV</a></li>
+                                        </ul>  
+                                    </div>
+                                </li>                               
+                            </ul>
+                        </div>
+                    </div>                    
+                </li>
+                <!-- FIN SECCION TELEVISORES -->
+
+                <!-- SECCION DROP SILLAS -->
+                <li class="menu-productos-dropdown categoria" >
+                    <div class="drop">
+                        <div class="dropdown-productos">
+                            <div class="dropdown-name-buttons" onclick="showOrHide(this)">
+                                <p><i class="fas fa-chair"></i> SILLAS</p>
+                                <div class="botones-drop-menu-cat">
+                                    <!-- BOTONES MOBILE -->
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-minus none"></i>
+                                </div>
+                            </div>
+                            <ul class="prods-dropdown productos-menu none"> <!-- 4 secciones L LC RC R-->                                
+                                <li class="secc-l">
+                                    <!-- SILLAS -->
+                                    <div class="prods-secc-interna">
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-chair"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Sillas-Gamer/CAT_ID=70/SCAT_ID=3914/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="titulo-seccion-dropdown">SILLAS</a>
+                                        </div>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Sillas-Gamer/CAT_ID=70/SCAT_ID=3914/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Sillas Gamer</a></li>                                    
+                                        </ul>  
+                                    </div>
+                                </li>                               
+                            </ul>
+                        </div>
+                    </div>                    
+                </li>
+                <!-- FIN SECCION SILLAS -->
+
+                <!-- SECCION DROP SMARTWATCH - SMARTBAND -->
+                <li class="menu-productos-dropdown categoria" >
+                    <div class="drop">
+                        <div class="dropdown-productos">
+                            <div class="dropdown-name-buttons" onclick="showOrHide(this)">
+                                <p><i class="fas fa-clock"></i> SMARTWATCH - SMARTBAND</p>
+                                <div class="botones-drop-menu-cat">
+                                    <!-- BOTONES MOBILE -->
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-minus none"></i>
+                                </div>
+                            </div>
+                            <ul class="prods-dropdown productos-menu none"> <!-- 4 secciones L LC RC R-->                                
+                                <li class="secc-l">
+                                    <!-- SMARTWATCH - SMARTBAND -->
+                                    <div class="prods-secc-interna">
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-clock"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/SmartBand/CAT_ID=77/SCAT_ID=3950/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="titulo-seccion-dropdown">SMARTWATCH - SMARTBAND</a>
+                                        </div>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/SmartBand/CAT_ID=77/SCAT_ID=3950/SCA_ID=-1/m=-1/OR=1/maximus.aspx">SmartBand</a></li>                                                                       
+                                        </ul>  
+                                    </div>
+                                </li>                               
+                            </ul>
+                        </div>
+                    </div>                    
+                </li>
+                <!-- FIN SECCION SMARTWATCH - SMARTBAND -->
+
+                <!-- SECCION DROP ACCESORIOS -->
+                <li class="menu-productos-dropdown categoria" >
+                    <div class="drop">
+                        <div class="dropdown-productos">
+                            <div class="dropdown-name-buttons" onclick="showOrHide(this)">
+                                <p><i class="fas fa-shopping-bag"></i> ACCESORIOS</p>
+                                <div class="botones-drop-menu-cat">
+                                    <!-- BOTONES MOBILE -->
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-minus none"></i>
+                                </div>
+                            </div>
+                            <ul class="prods-dropdown productos-menu none"> <!-- 4 secciones L LC RC R-->                                
+                                <li class="secc-l">
+                                    <!-- ACCESORIOS -->
+                                    <div class="prods-secc-interna">
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-shopping-bag"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Accesorios/SCA_ID=-1/CAT_ID=5/SCAT_ID=-1/m=-1/OR=1/maximus.aspx" class="titulo-seccion-dropdown">ACCESORIOS</a>
+                                        </div>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Soportes-Para-GPu/CAT_ID=5/SCAT_ID=3943/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Soportes de GPU</a></li>                                    
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Cables-Mallados/CAT_ID=5/SCAT_ID=3951/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Cables Mallados</a></li>                                    
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Tiras-LED/CAT_ID=5/SCAT_ID=3952/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Tiras LED</a></li>                                    
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Estabilizador-y-UPS/CAT_ID=5/SCAT_ID=3878/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Estabilizador y UPS</a></li>                                    
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Routers/CAT_ID=14/SCAT_ID=3861/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Routers</a></li>                                    
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Mochilas-y-Bolsos/CAT_ID=5/SCAT_ID=3889/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Mochilas y Bolsos</a></li>                                    
+                                        </ul>  
+                                    </div>
+                                </li>                               
+                            </ul>
+                        </div>
+                    </div>                    
+                </li>
+                <!-- FIN SECCION ACCESORIOS -->
+
+                <!-- SECCION DROP PEQUEÑOS ELECTRODOMESTICOS -->
+                <li class="menu-productos-dropdown categoria" >
+                    <div class="drop">
+                        <div class="dropdown-productos">
+                            <div class="dropdown-name-buttons" onclick="showOrHide(this)">
+                                <p><i class="fas fa-thermometer-three-quarters"></i> PEQUEÑOS ELECTRODOMESTICOS</p>
+                                <div class="botones-drop-menu-cat">
+                                    <!-- BOTONES MOBILE -->
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-minus none"></i>
+                                </div>
+                            </div>
+                            <ul class="prods-dropdown productos-menu none"> <!-- 4 secciones L LC RC R-->                                
+                                <li class="secc-l">
+                                    <!-- PEQUEÑOS ELECTRODOMESTICOS -->
+                                    <div class="prods-secc-interna">
+                                        <div class="titulo-seccion-interna-mobile">
+                                            <i class="fas fa-thermometer-three-quarters"></i>
+                                            <a href="https://www.maximus.com.ar/ARTICULOS/Peque%C3%B1os-Electrodomesticos/SCA_ID=-1/CAT_ID=84/SCAT_ID=-1/m=-1/OR=1/maximus.aspx" class="titulo-seccion-dropdown">PEQUEÑOS ELECTRODOMESTICOS</a>
+                                        </div>
+                                        <ul class="lista-seccion-dropdown">
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/Termometros/CAT_ID=84/SCAT_ID=3974/SCA_ID=-1/m=-1/OR=1/maximus.aspx">Termometros</a></li>                                                                       
+                                            <li class="link-dropdown"><a href="https://www.maximus.com.ar/ARTICULOS/TV-Stick---TV-Box/CAT_ID=84/SCAT_ID=3975/SCA_ID=-1/m=-1/OR=1/maximus.aspx">TV Stick - TV Box</a></li>                                                                       
+                                        </ul>  
+                                    </div>
+                                </li>                               
+                            </ul>
+                        </div>
+                    </div>                    
+                </li>
+                <!-- FIN SECCION PEQUEÑOS ELECTRODOMESTICOS -->           
             </ul>
         </div>
-        <!--   //////////////////////////// FIN MENU CATEGORIAS  ////////////////////////////-->
+        <!--   //////////////////////////// FIN MENU CATEGORIAS MOBILE ////////////////////////////-->
 
 
 
-        <div class="container-header">
+
+        <div class="container-header-top">
 
             <div class="header-top">
                 <div class="logo">
@@ -394,7 +705,7 @@
                         <span class="burg burg-2"></span>
                         <span class="burg burg-3"></span>
                     </div>
-                    <i class="fas fa-times"></i>
+                    <i class="fas fa-times cruz-menu-mobile"></i>
                     <a href="#">
                         <img src="./logomaximusverdenew.svg" alt="">
                     </a>                  
@@ -411,38 +722,555 @@
                 
 
                 <div class="session-carrito">
-                    <a href="#" class="cuenta"><i class="fas fa-user"></i></a>
+                    <a href="https://www.maximus.com.ar/LOGIN/login/maximus.aspx" class="cuenta"><i class="fas fa-user"></i></a>
                     <a href="#" class="search-mobile-button"><i class="fas fa-search 1"></i></a>
-                    <a href="#" class="carrito"><i class="fas fa-cart-plus"></i></i><i class="fas fa-caret-down"></i></a>                
+                    <a href="#" class="carrito">
+                        <i class="fas fa-cart-plus"></i></i>
+                        <i class="fas fa-caret-down"></i>
+                        <p class="cant-carrito">10</p>
+                    </a>                
                 </div>
             </div>
 
-            <!-- 
-            <nav class="nav-bar-web">
-                <div class="nav-left">
-                    <i class="fas fa-bars"></i>
-                     <p>Todas las categorías</p>
-                </div>
-                <div class="nav-right">
-                    <a href="#" class="arma">ARMÁ TU PC</a>
-                    <a href="#">ARMÁ TU COMBO</a>
-                </div>
-            </nav> -->
         </div>
+        <nav class="header-bottom">
+            <div class="header-bottom-interno">
+                <div class="categorias-web">
+                    <div class="hamburger-menu-web">
+                        <span class="burg burg-1"></span>
+                        <span class="burg burg-2"></span>
+                        <span class="burg burg-3"></span>
+                    </div>
+                    <i class="fas fa-times none"></i>
+                    <p>Categorias</p>
+                </div>
+                <div class="arma-pc-combo-web">
+                    <a href="https://www.maximus.com.ar/ARTICULOS/Notebooks/CAT_ID=56/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/maximus.aspx">NOTEBOOKS</a>
+                    <a href="https://www.maximus.com.ar/armarpc/armar-pc/maximus.aspx">ARMÁ TU PC</a>
+                    <a href="https://www.maximus.com.ar/combopc/combo-pc/maximus.aspx">ARMÁ TU COMBO</a>
+                </div>
+                <div class="filler"></div>
+            </div>
+        </nav>
+
+        <!-- SIDEBAR MENU CATEGORIAS -->
+        <aside class="sidebar-menu-web">
+            <div class="container-sidebar">
+                <ul class="categorias-sidebar">
+                    
+                    <!-- COMPONENTES DE PC -->
+                    <li class="componentes-sidebar sub-menu-componentes">
+                        <i></i> <!-- ICONITO -->
+                        <div class="apertura-cat-principal">                            
+                            <a href="#"><i class="fas fa-server"></i> COMPONENTES DE PC</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </li>
+
+                    <!-- MONITORES -->
+                    <li class="componentes-sidebar">
+                        <i></i> <!-- ICONITO -->
+                        <div class="apertura-cat-principal">
+                            <a href="#"><i class="fas fa-desktop"></i> MONITORES</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </li>
+
+                    <!-- PERIFERICOS -->
+                    <li class="componentes-sidebar">
+                        <i></i> <!-- ICONITO -->
+                        <div class="apertura-cat-principal">
+                            <a href="#"><i class="far fa-keyboard"></i> PERIFERICOS</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </li>
+
+                    <!-- SISTEMA OPERATVO -->
+                    <li class="componentes-sidebar">
+                        <i></i> <!-- ICONITO -->
+                        <div class="apertura-cat-principal">
+                            <a href="#"><i class="fab fa-windows"></i> SISTEMA OPERATIVO</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </li>
+
+                    <!-- CAPTURADORAS DE VIDEO -->
+                    <li class="componentes-sidebar">
+                        <i></i> <!-- ICONITO -->
+                        <div class="apertura-cat-principal">
+                            <a href="#"><i class="fas fa-photo-video"></i> CAPTURADORAS DE VIDEO</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </li>
+                    
+                    <!-- TABLETS -->
+                    <li class="componentes-sidebar">
+                        <i></i> <!-- ICONITO -->
+                        <div class="apertura-cat-principal">
+                            <a href="#"><i class="fas fa-tablet-alt"></i> TABLETS</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </li>
+                    <!-- PLACAS DE RED -->
+                    <li class="componentes-sidebar">
+                        <i></i> <!-- ICONITO -->
+                        <div class="apertura-cat-principal">
+                            <a href="#"><i class="fas fa-wifi"></i> PLACAS DE RED</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </li>
+                    <!-- IMPRESORAS -->
+                    <li class="componentes-sidebar">
+                        <i></i> <!-- ICONITO -->
+                        <div class="apertura-cat-principal">
+                            <a href="#"><i class="fas fa-print"></i> IMPRESORAS</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </li>
+                    <!-- PADS -->
+                    <li class="componentes-sidebar">
+                        <i></i> <!-- ICONITO -->
+                        <div class="apertura-cat-principal">
+                            <a href="#"><i class="fas fa-square"></i> PADS</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </li>
+                    <!-- TELEVISORES -->
+                    <li class="componentes-sidebar">
+                        <i></i> <!-- ICONITO -->
+                        <div class="apertura-cat-principal">
+                            <a href="#"><i class="fas fa-tv"></i> TELEVISORES</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </li>
+
+                    <!-- SILLAS -->
+                    <li class="componentes-sidebar">
+                        <i></i> <!-- ICONITO -->
+                        <div class="apertura-cat-principal">
+                            <a href="#"><i class="fas fa-chair"></i> SILLAS</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </li>
+
+                    <!-- SMARTWATCH - SMARTBAND -->
+                    <li class="componentes-sidebar">
+                        <i></i> <!-- ICONITO -->
+                        <div class="apertura-cat-principal">
+                            <a href="#"><i class="fas fa-clock"></i> SMARTWATCH - SMARTBAND</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </li>
+                
+                    <!-- ACCESORIOS -->
+                    <li class="componentes-sidebar">
+                        <i></i> <!-- ICONITO -->
+                        <div class="apertura-cat-principal">
+                            <a href="#"><i class="fas fa-shopping-bag"></i> ACCESORIOS</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </li>
+                    
+                    <!-- PEQUEÑOS ELECTRODOMESTICOS -->
+                    <li class="componentes-sidebar">
+                        <i></i> <!-- ICONITO -->
+                        <div class="apertura-cat-principal">
+                            <a href="#"><i class="fas fa-thermometer-three-quarters"></i> PEQUEÑOS ELECTRODOMESTICOS</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </li>
+
+                    
+                      
+                </ul>
+            </div>
+            <div class="container-sidebar">
+                <!-- COMPONENTES SECUNDARIO -->
+                <ul class="cats-secundarias-sidebar container-sidebar sidebar-componentes none">
+                    <div class="columna-side columna-izquierda-side-secundario">
+                        <!-- PROCESADORES SECUNDARIO -->
+                        <li class="cat-secundaria">
+                            <div class="cat-secundaria-titulo-icono">
+                                <i class="fas fa-microchip"></i>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Microprocesador/CAT_ID=52/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="cat-secundaria-titulo">MICROPROCESADORES</a>
+                            </div>
+                            <div class="cat-secundaria-interno">
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Socket-AMD-AM4/CAT_ID=52/SCAT_ID=3898/SCA_ID=-1/m=132/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Socket AMD AM4</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Socket-Intel-1151/CAT_ID=52/SCAT_ID=3893/SCA_ID=-1/m=133/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Socket Intel 1151</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Socket-Intel-1200/CAT_ID=52/SCAT_ID=3956/SCA_ID=-1/m=133/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Socket Intel 1200</a>
+                            </div>
+                        </li>
+                        <!-- MOTHERS SECUNDARIO -->
+                        <li class="cat-secundaria">
+                            <div class="cat-secundaria-titulo-icono">
+                                <i class="fas fa-sd-card"></i>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Motherboards/CAT_ID=47/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="titulo-seccion-dropdown">MOTHERBOARDS</a>
+                            </div>
+                            <div class="cat-secundaria-interno">
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Mother-AMD-AM4/CAT_ID=47/SCAT_ID=3899/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="links-cat-secundaria-interno">Mother AMD AM4</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Mother-Intel-1151/CAT_ID=47/SCAT_ID=3894/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="links-cat-secundaria-interno">Mother Intel 1151</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Mother-Intel-1200/CAT_ID=47/SCAT_ID=3955/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="links-cat-secundaria-interno">Mother Intel 1200</a>
+                            </div>
+                        </li>
+                        <!-- RAM SECUNDARIO -->
+                        <li class="cat-secundaria">
+                            <div class="cat-secundaria-titulo-icono">
+                                <i class="fas fa-memory"></i>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Memorias-RAM/CAT_ID=50/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="cat-secundaria-titulo">MEMORIAS RAM</a>  
+                            </div>
+                            <div class="cat-secundaria-interno">
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Memorias-Para-PC/CAT_ID=50/SCAT_ID=3828/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Memoris Para PC (UDIMM)</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Memorias-Para-Notebook/CAT_ID=50/SCAT_ID=3870/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Memorias Para Notebook (SODIMM)</a>
+                            </div>
+                        </li>
+                        <!-- PLACAS DE VIDEO -->
+                        <li class="cat-secundaria">
+                            <div class="cat-secundaria-titulo-icono">
+                                <i class="fas fa-gamepad"></i>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Placas-de-Video/CAT_ID=48/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="cat-secundaria-titulo">PLACAS DE VIDEO</a>
+                            </div>
+                            <div class="cat-secundaria-interno">
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Placas-de-Video-AMD/CAT_ID=48/SCAT_ID=3826/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Placa de Video AMD Radeon</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Placas-de-Video-Nvidia/CAT_ID=48/SCAT_ID=3908/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Placa de Video Nvidia</a>
+                            </div>
+                        </li>
+                        <!-- ALMACENAMIENTO -->
+                        <li class="cat-secundaria">
+                            <div class="cat-secundaria-titulo-icono">
+                                <i class="fas fa-hdd"></i>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Discos/CAT_ID=53/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="cat-secundaria-titulo">ALMACENAMIENTO</a>
+                            </div>
+                            <div class="cat-secundaria-interno">
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Discos-Externos-USB/CAT_ID=53/SCAT_ID=3832/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Discos Externos USB</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Discos-Internos-HDD-Para-Notebook/CAT_ID=53/SCAT_ID=3835/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Discos Rígidos HDD para Notebook</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Discos-Internos-HDD-Para-PC/CAT_ID=53/SCAT_ID=3831/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Discos Rígidos HDD para PC</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Discos-Solidos-SSD-Internos/CAT_ID=53/SCAT_ID=3838/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Discos Sólidos SSD Internos</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Memorias-SD-Y-Pendrives/CAT_ID=53/SCAT_ID=3979/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Memorias SD - Pendrives</a>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="columna-side columna-derecha-side-secundario none">
+                        <!-- REFRIGERACIÓN -->
+                        <li class="cat-secundaria">
+                            <div class="cat-secundaria-titulo-icono">
+                                <i class="fas fa-snowflake"></i>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Refrigeracion/CAT_ID=2/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="cat-secundaria-titulo">REFRIGERACIÓN</a>
+                            </div>
+                            <div class="cat-secundaria-interno">
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Disipadores-Por-Aire/CAT_ID=2/SCAT_ID=7/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Air Cooling</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Watercoolers/CAT_ID=2/SCAT_ID=3900/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Water Cooling</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Pasta-Termica/CAT_ID=2/SCAT_ID=3902/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Pasta Térmica</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Ventilador-120MM/CAT_ID=2/SCAT_ID=3981/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Fan 120mm</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Ventilador-140MM/CAT_ID=2/SCAT_ID=3982/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Fan 140mm</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Accesorios-Refrigeracion/CAT_ID=2/SCAT_ID=3944/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Accesorios</a>
+                            </div>
+                        </li>
+                        <!-- FUENTES -->
+                        <li class="cat-secundaria">
+                            <div class="cat-secundaria-titulo-icono">
+                                <i class="fas fa-car-battery"></i>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Fuentes/CAT_ID=7/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="cat-secundaria-titulo">FUENTES</a>
+                            </div>
+                            <div class="cat-secundaria-interno">
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Fuentes-Genericas/CAT_ID=7/SCAT_ID=3965/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Sin certificado</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Fuentes-80-Plus-White/CAT_ID=7/SCAT_ID=3968/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">80 Plus White</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Fuentes-80-Plus-Bronce/CAT_ID=7/SCAT_ID=3966/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">80 Plus Bronce</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Fuentes-80-Plus-Gold/CAT_ID=7/SCAT_ID=3967/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">80 Plus Gold</a>
+                            </div>
+                        </li>
+                        <!-- GABINETES -->
+                        <li class="cat-secundaria">
+                            <div class="cat-secundaria-titulo-icono">
+                                <i class="fas fa-box"></i>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Gabinetes/CAT_ID=1/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="cat-secundaria-titulo">GABINETES</a>
+                            </div>
+                            <div class="cat-secundaria-interno">
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Gabinetes-Full-Tower/CAT_ID=1/SCAT_ID=1/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Full Tower</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Gabinetes-Mid-Tower/CAT_ID=1/SCAT_ID=2/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Mid Tower</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Gabinetes-Mini-Tower/CAT_ID=1/SCAT_ID=3909/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Mini Tower</a>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+                
+                <!-- MONITORES SECUNDARIO -->
+                <ul class="cats-secundarias-sidebar container-sidebar sidebar-monitores none">
+                    <li class="cat-secundaria">
+                        <div class="cat-secundaria-titulo-icono">
+                            <i class="fas fa-desktop"></i>
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Monitores/CAT_ID=59/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="cat-secundaria-titulo">MONITORES</a>
+                        </div>
+                        <div class="cat-secundaria-interno">
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Monitores-165Hz/SCA_ID=-1/CAT_ID=59/SCAT_ID=3962/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Monitores 165Hz</a>
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Monitores-144Hz/SCA_ID=-1/CAT_ID=59/SCAT_ID=3932/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Monitores 144Hz</a>
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Monitores-LED/SCA_ID=-1/CAT_ID=59/SCAT_ID=3856/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Monitores LED</a>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- PERIFERICOS SECUNDARIO -->
+                <ul class="cats-secundarias-sidebar container-sidebar sidebar-perifericos none">
+                    <div class="columna-side columna-izquierda-side-secundario none">
+                        <!-- TECLADOS -->
+                        <li class="cat-secundaria">
+                            <div class="cat-secundaria-titulo-icono">
+                                <i class="fas fa-keyboard"></i>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Teclados/CAT_ID=10/SCAT_ID=28/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="cat-secundaria-titulo">TECLADOS</a>
+                            </div>
+                            <div class="cat-secundaria-interno">
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Teclados-Mecanicos/CAT_ID=10/SCAT_ID=28/SCA_ID=-1/m=-1/OR=1/wco=6/tv=MECANICO/maximus.aspx" class="cat-secundaria-interno-link">Teclados Mecánicos</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Teclados-Membrana/CAT_ID=10/SCAT_ID=28/SCA_ID=-1/m=-1/OR=1/wco=6/tv=MEMBRANA/maximus.aspx" class="cat-secundaria-interno-link">Teclados Membrana</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Teclados-RGB/CAT_ID=10/SCAT_ID=28/SCA_ID=-1/m=-1/OR=1/wco=7/tv=RGB/maximus.aspx" class="cat-secundaria-interno-link">Teclados RGB</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Combo-Teclados/CAT_ID=10/SCAT_ID=28/SCA_ID=-1/m=-1/OR=1/wco=8/tv=COMBO/maximus.aspx" class="cat-secundaria-interno-link">Combo Teclados</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Accesorios-para-Teclados/CAT_ID=10/SCAT_ID=28/SCA_ID=-1/OR=1/m=-1/wco=19/tv=KEYCAPS/maximus.aspx" class="cat-secundaria-interno-link">Accesorios para Teclados</a>
+                            </div>
+                        </li>
+                        <!-- MOUSE -->
+                        <li class="cat-secundaria">
+                            <div class="cat-secundaria-titulo-icono">
+                                <i class="fas fa-mouse"></i>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Mouse/CAT_ID=10/SCAT_ID=29/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="cat-secundaria-titulo">MOUSE</a>
+                            </div>
+                            <div class="cat-secundaria-interno">
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Gamer/SCA_ID=-1/CAT_ID=10/SCAT_ID=29/m=-1/OR=1/wco=10/tv=GAMERS/maximus.aspx" class="cat-secundaria-interno-link">Mouse Gamer</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Optico/SCA_ID=-1/CAT_ID=10/SCAT_ID=29/m=-1/OR=1/wco=9/tv=OPTICO/maximus.aspx" class="cat-secundaria-interno-link">Mouse Optico</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Laser/SCA_ID=-1/CAT_ID=10/SCAT_ID=29/m=-1/OR=1/wco=9/tv=LASER/maximus.aspx" class="cat-secundaria-interno-link">Mouse Laser</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Bungee/SCA_ID=-1/CAT_ID=10/SCAT_ID=29/m=-1/OR=1/wco=9/tv=BUNGEE/maximus.aspx" class="cat-secundaria-interno-link">Mouse Bungee</a>
+                            </div>
+                        </li>
+                        <!-- AURICULARES -->
+                        <li class="cat-secundaria">
+                            <div class="cat-secundaria-titulo-icono">
+                                <i class="fas fa-headphones"></i>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Auriculares/CAT_ID=10/SCAT_ID=3821/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="cat-secundaria-titulo">AURICULARES</a>
+                            </div>
+                            <div class="cat-secundaria-interno">
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Auriculares-Gamer/SCA_ID=-1/CAT_ID=10/SCAT_ID=3821/m=-1/OR=1/wco=12/tv=GAMERS/maximus.aspx" class="cat-secundaria-interno-link">Auriculares Gamer</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Auriculares-Estereo/SCA_ID=-1/CAT_ID=10/SCAT_ID=3821/m=-1/OR=1/wco=11/tv=ESTEREO/maximus.aspx" class="cat-secundaria-interno-link">Auriculares Estereo</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Auriculares-Surround/SCA_ID=-1/CAT_ID=10/SCAT_ID=3821/m=-1/OR=1/wco=11/tv=SURROUND/maximus.aspx" class="cat-secundaria-interno-link">Auriculares Surround</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Soporte-de-Auriculares/SCA_ID=-1/CAT_ID=10/SCAT_ID=3821/m=-1/OR=1/wco=11/tv=SOPORTE/maximus.aspx" class="cat-secundaria-interno-link">Soporte de Auriculares</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Auriculares-para-Celu%C3%B1ar/SCA_ID=-1/CAT_ID=10/SCAT_ID=3821/m=-1/OR=1/wco=12/tv=CELULAR/maximus.aspx" class="cat-secundaria-interno-link">Auriculares para Celular</a>
+                            </div>
+                        </li>
+                        <!-- JOYSTICKS -->
+                        <li class="cat-secundaria">
+                            <div class="cat-secundaria-titulo-icono">
+                                <i class="fas fa-gamepad"></i>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Joystick/SCA_ID=-1/CAT_ID=10/SCAT_ID=3866/m=-1/OR=1/maximus.aspx" class="cat-secundaria-titulo">JOYSTICKS</a>
+                            </div>
+                            <div class="cat-secundaria-interno">
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Joystick/SCA_ID=-1/CAT_ID=10/SCAT_ID=3866/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Joystick</a>
+                            </div>
+                        </li>
+                        <!-- WEBCAMS -->
+                        <li class="cat-secundaria">
+                            <div class="cat-secundaria-titulo-icono">
+                                <i class="fas fa-video"></i>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Webcam/CAT_ID=10/SCAT_ID=3970/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-titulo">WEBCAMS</a>
+                            </div>
+                            <div class="cat-secundaria-interno">
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Webcam/CAT_ID=10/SCAT_ID=3970/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Webcams</a>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="columna-side columna-derecha-side-secundario none">
+                        <!-- MICROFONOS -->
+                        <li class="cat-secundaria">
+                            <div class="cat-secundaria-titulo-icono">
+                                <i class="fas fa-microphone"></i>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Microfonos/CAT_ID=10/SCAT_ID=3953/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-titulo">MICROFONOS</a>
+                            </div>
+                            <div class="cat-secundaria-interno">
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Microfonos/CAT_ID=10/SCAT_ID=3953/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Microfonos</a>
+                            </div>
+                        </li>
+                        <!-- PARLANTES -->
+                        <li class="cat-secundaria">
+                            <div class="cat-secundaria-titulo-icono">
+                                <i class="fas fa-volume-up"></i>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Parlantes/SCA_ID=-1/CAT_ID=10/SCAT_ID=3847/m=-1/OR=1/maximus.aspx" class="cat-secundaria-titulo">PARLANTES</a>
+                            </div>
+                            <div class="cat-secundaria-interno">
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Parlantes/SCA_ID=-1/CAT_ID=10/SCAT_ID=3847/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Parlantes</a>
+                            </div>
+                        </li>
+                        <!-- VOLANTES Y ACCESORIOS -->
+                        <li class="cat-secundaria">
+                            <div class="cat-secundaria-titulo-icono">
+                                <i class="fas fa-dharmachakra"></i>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Volantes/SCA_ID=-1/CAT_ID=10/SCAT_ID=3977/m=-1/OR=1/maximus.aspx" class="cat-secundaria-titulo">VOLANTES Y ACCESORIOS</a>
+                            </div>
+                            <div class="cat-secundaria-interno">
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Volantes/SCA_ID=-1/CAT_ID=10/SCAT_ID=3977/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Volantes</a>
+                                <a href="https://www.maximus.com.ar/ARTICULOS/Base-Volante/SCA_ID=-1/CAT_ID=83/SCAT_ID=3978/m=-1/OR=1/maximus.aspx" class="cat-secundaria-interno-link">Bases para Volante</a>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+
+                <!-- SISTEMA OPERATIVO SECUNDARIO -->
+                <ul class="cats-secundarias-sidebar container-sidebar sidebar-os none">
+                    <!-- OS -->
+                    <li class="cat-secundaria">  
+                        <div class="cat-secundaria-titulo-icono">
+                            <i class="fab fa-windows"></i>
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Windows/SCA_ID=-1/CAT_ID=60/SCAT_ID=3869/m=-1/OR=1/maximus.aspx" class="cat-secundaria-titulo">SISTEMA OPERATIVO</a>              
+                        </div>
+                        <div class="cat-secundaria-interno">
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Windows/SCA_ID=-1/CAT_ID=60/SCAT_ID=3869/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Microsoft Windows</a>                            
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- CAPTURADORAS DE VIDEO SECUNDARIO -->
+                <ul class="cats-secundarias-sidebar container-sidebar sidebar-capturadoras none">
+                    <li class="cat-secundaria">  
+                        <div class="cat-secundaria-titulo-icono">
+                            <i class="fas fa-file-video"></i>
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Capturadoras-de-Video/SCA_ID=-1/CAT_ID=80/SCAT_ID=3958/m=-1/OR=1/maximus.aspx" class="cat-secundaria-titulo">CAPTURADORAS DE VIDEO</a>            
+                        </div>  
+                        <div class="cat-secundaria-interno">
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Capturadoras-de-Video/SCA_ID=-1/CAT_ID=80/SCAT_ID=3958/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Capturadoras de Video</a>                            
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- TABLETS SECUNDARIO -->
+                <ul class="cats-secundarias-sidebar container-sidebar sidebar-tablets none">
+                    <li class="cat-secundaria"> 
+                        <div class="cat-secundaria-titulo-icono">
+                            <i class="fas fa-tablet"></i>
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Tablets/CAT_ID=79/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-titulo">TABLETS</a>               
+                        </div>
+                        <div class="cat-secundaria-interno">
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Tabletas-Digitalizadoras/CAT_ID=79/SCAT_ID=3973/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Tablets Digitalizadoras</a>                            
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- PLACAS DE RED SECUNDARIO -->
+                <ul class="cats-secundarias-sidebar container-sidebar sidebar-placas-red none">
+                    <li class="cat-secundaria">
+                        <div class="cat-secundaria-titulo-icono">
+                            <i class="fas fa-network-wired"></i>
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Placas-de-Red/CAT_ID=14/SCAT_ID=-1/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="cat-secundaria-titulo">PLACAS DE RED</a>
+                        </div>
+                        <div class="cat-secundaria-interno">
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Placas-de-Red-USB/SCA_ID=-1/CAT_ID=14/SCAT_ID=3862/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Placas de Red USB</a>
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Placas-de-Red-PCIe/SCA_ID=-1/CAT_ID=14/SCAT_ID=3863/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Placas de Red PCIe</a>                            
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- IMPRESORAS SECUNDARIO -->
+                <ul class="cats-secundarias-sidebar container-sidebar sidebar-impresoras none">
+                    <li class="cat-secundaria">
+                        <div class="cat-secundaria-titulo-icono">
+                            <i class="fas fa-print"></i>
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Impresoras/SCA_ID=-1/CAT_ID=57/SCAT_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-titulo">IMPRESORAS</a>
+                        </div>
+                        <div class="cat-secundaria-interno">
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Impresoras-Laser/SCA_ID=-1/CAT_ID=57/SCAT_ID=3853/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Impresoras Laser</a>
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Resma-Hojas/CAT_ID=57/SCAT_ID=3971/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Resma de Hojas</a>                            
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Toner-Impresora/CAT_ID=57/SCAT_ID=3854/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Tones de Impresora</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- PADS SECUNDARIO -->
+                <ul class="cats-secundarias-sidebar container-sidebar sidebar-pads none">
+                    <li class="cat-secundaria">  
+                        <div class="cat-secundaria-titulo-icono">
+                            <i class="fas fa-square"></i>
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Pad/CAT_ID=10/SCAT_ID=3980/SCA_ID=-1/m=-1/OR=1/BUS=/maximus.aspx" class="cat-secundaria-titulo">PADS</a>              
+                        </div>
+                        <div class="cat-secundaria-interno">
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Pad-S/SCA_ID=-1/CAT_ID=10/SCAT_ID=3980/m=-1/OR=1/wco=13/tv=S/maximus.aspx" class="links-cat-secundaria-interno">Pad Small</a>                            
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Pad-M/SCA_ID=-1/CAT_ID=10/SCAT_ID=3980/m=-1/OR=1/wco=13/tv=M/maximus.aspx" class="links-cat-secundaria-interno">Pad Medium</a>                            
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Pad-L/SCA_ID=-1/CAT_ID=10/SCAT_ID=3980/m=-1/OR=1/wco=13/tv=L/maximus.aspx" class="links-cat-secundaria-interno">Pad Large</a>                            
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Mouse-Pad-XL/SCA_ID=-1/CAT_ID=10/SCAT_ID=3980/m=-1/OR=1/wco=13/tv=XL/maximus.aspx" class="links-cat-secundaria-interno">Pad ExtraLarge</a>                            
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- TELEVISORES SECUNDARIO -->
+                <ul class="cats-secundarias-sidebar container-sidebar sidebar-televisores none">
+                    <li class="cat-secundaria">   
+                        <div class="cat-secundaria-titulo-icono">
+                            <i class="fas fa-tv"></i>
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Smart-TV/CAT_ID=85/SCAT_ID=3976/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-titulo">TELEVISORES</a>             
+                        </div>
+                        <div class="cat-secundaria-interno">
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Smart-TV/CAT_ID=85/SCAT_ID=3976/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Smart TV</a>                                                                                                            
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- SILLAS SECUNDARIO -->
+                <ul class="cats-secundarias-sidebar container-sidebar sidebar-sillas none">
+                    <li class="cat-secundaria">   
+                        <div class="cat-secundaria-titulo-icono">
+                            <i class="fas fa-chair"></i>
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Sillas-Gamer/CAT_ID=70/SCAT_ID=3914/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-titulo">SILLAS</a>         
+                        </div>    
+                        <div class="cat-secundaria-interno">
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Sillas-Gamer/CAT_ID=70/SCAT_ID=3914/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Sillas Gamer</a>                                                                                                            
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- SMARTWATCH - SMARTBAND SECUNDARIO -->
+                <ul class="cats-secundarias-sidebar container-sidebar sidebar-smartwatch-band none">
+                    <li class="cat-secundaria"> 
+                        <div class="cat-secundaria-titulo-icono">
+                            <i class="fas fa-clock"></i>
+                            <a href="https://www.maximus.com.ar/ARTICULOS/SmartBand/CAT_ID=77/SCAT_ID=3950/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-titulo">SMARTWATCH - SMARTBAND</a>         
+                        </div>      
+                        <div class="cat-secundaria-interno">
+                            <a href="https://www.maximus.com.ar/ARTICULOS/SmartBand/CAT_ID=77/SCAT_ID=3950/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">SmartBand</a>                                                                                                            
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- ACCESORIOS SECUNDARIO -->
+                <ul class="cats-secundarias-sidebar container-sidebar sidebar-accesorios none">
+                    <li class="cat-secundaria">  
+                        <div class="cat-secundaria-titulo-icono">
+                            <i class="fas fa-shopping-bag"></i>
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Accesorios/SCA_ID=-1/CAT_ID=5/SCAT_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-titulo">ACCESORIOS</a>              
+                        </div>
+                        <div class="cat-secundaria-interno">
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Soportes-Para-GPu/CAT_ID=5/SCAT_ID=3943/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Soportes de GPU</a>                            
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Cables-Mallados/CAT_ID=5/SCAT_ID=3951/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Cables Mallados</a>                            
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Tiras-LED/CAT_ID=5/SCAT_ID=3952/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Tiras LED</a>                            
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Estabilizador-y-UPS/CAT_ID=5/SCAT_ID=3878/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Estabilizador y UPS</a>                            
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Routers/CAT_ID=14/SCAT_ID=3861/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Routers</a>                            
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Mochilas-y-Bolsos/CAT_ID=5/SCAT_ID=3889/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Mochilas y Bolsos</a>                            
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- PEQUEÑOS ELECTRODOMESTICOS SECUNDARIO -->
+                <ul class="cats-secundarias-sidebar container-sidebar sidebar-electrodomesticos none">
+                    <li class="cat-secundaria">    
+                        <div class="cat-secundaria-titulo-icono">
+                            <i class="fas fa-thermometer-three-quarters"></i>
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Peque%C3%B1os-Electrodomesticos/SCA_ID=-1/CAT_ID=84/SCAT_ID=-1/m=-1/OR=1/maximus.aspx" class="cat-secundaria-titulo">PEQUEÑOS ELECTRODOMESTICOS</a>          
+                        </div>  
+                        <div class="cat-secundaria-interno">
+                            <a href="https://www.maximus.com.ar/ARTICULOS/Termometros/CAT_ID=84/SCAT_ID=3974/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">Termometros</a>                            
+                            <a href="https://www.maximus.com.ar/ARTICULOS/TV-Stick---TV-Box/CAT_ID=84/SCAT_ID=3975/SCA_ID=-1/m=-1/OR=1/maximus.aspx" class="links-cat-secundaria-interno">TV Stick - TV Box</a>                                                    
+                        </div>
+                    </li>
+                </ul>
+            </div>                       
+        </aside>
     </header>
     
-    <div class="prueba">
-
-    </div>
+    
     <main class="main">
 
-
-
     </main>
-
-
-
-
     <script src="./app.js"></script>
 </body>
 </html>
