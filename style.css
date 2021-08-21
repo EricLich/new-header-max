@@ -318,7 +318,7 @@ a{
     width: 100%;
     height: auto;
     background-color: black;
-    position: absolute;
+    position: fixed; 
     top: 110px;
     transform: translateX(-100%);
     transition: ease-in-out 0.3s;
