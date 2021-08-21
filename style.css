@@ -45,6 +45,7 @@ header{
     box-shadow: 1px 2px 11px -2px rgba(0,0,0,0.84);
 -webkit-box-shadow: 1px 2px 11px -2px rgba(0,0,0,0.84);
 -moz-box-shadow: 1px 2px 11px -2px rgba(0,0,0,0.84);
+border-radius: 0 0 3px 3px;
 }
 .filler-header{
     width: 100%;
@@ -167,7 +168,7 @@ a{
     min-width: 30px;
     text-align: center;
     background-color: var(--maximus-green);
-    padding: 7px;
+    padding: 5px;
     border-radius: 50%;
     color: black;
     font-weight: bold;
@@ -315,9 +316,9 @@ a{
 }
 .menu-categorias{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: black;
-    position: absolute; 
+    position: fixed; 
     top: 120px;
     transform: translateX(-100%);
     transition: ease-in-out 0.3s;
@@ -326,6 +327,7 @@ a{
 
 .menu-categorias-active{
     transform: translateX(0);
+    height: 100%;
     
 }
 
