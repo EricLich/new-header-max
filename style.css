@@ -196,20 +196,20 @@ a{
 /*search mobile - ESTA ESCONDIDO EN UN PRINCIPIO*/
 
 .search-mobile{
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    transform: translateY(-100%);
-    transition: ease-in-out 0.3s;
+    height: 100% !important;
+    width: 100% !important;
+    background-color: black !important;
+    position: absolute !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1 !important;
+    transform: translateY(-100%) !important;
+    transition: ease-in-out 0.3s !important;
 }
 
 .session-carrito a{
