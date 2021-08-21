@@ -11,19 +11,16 @@ buttonCarrito.addEventListener('click', () => {
     }
 })
 //animacion de search mobile
-let main = document.querySelector(".main")
 const buttonSearch = document.querySelector(".search-mobile-button");
 buttonSearch.addEventListener('click', () =>{
     let searchMobile = document.querySelector(".search-mobile");
     let claseActive = "search-mobile-active"
     let claseActiveCarrito = "carrito-drop-active"
 
-    let mainBlurred = "main-blurred"
     let flechaGuardarBusqueda = document.querySelector(".guardar-search-mobile")
     
     if(!searchMobile.classList.contains(claseActive)){
-        searchMobile.classList.add(claseActive);
-        main.classList.add(mainBlurred)
+        searchMobile.classList.add(claseActive)
         if(carritoMobile.classList.contains(claseActiveCarrito)){
             carritoMobile.classList.remove(claseActiveCarrito)
         }
@@ -32,7 +29,6 @@ buttonSearch.addEventListener('click', () =>{
         if(searchMobile.classList.contains(claseActive)){
             searchMobile.classList.remove(claseActive)
         }
-        main.classList.remove(mainBlurred)
     })
 })
 
