@@ -218,48 +218,48 @@ a{
 }
 
 .search-mobile-active{
-    display: flex;
-    transform: translateY(0);
-    z-index: 100;
+    display: flex !important;
+    transform: translateY(0) !important;
+    z-index: 100 !important;
 }
 
 .fa-arrow-left{
-    color: white;
-    margin-right: 0.7rem;
-    font-size: 1.5rem;
-    cursor: pointer;
+    color: white !important;
+    margin-right: 0.7rem !important;
+    font-size: 1.5rem !important;
+    cursor: pointer !important;
 }
 
 .search-mobile form{
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
+    width: 95% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin: auto !important;
 }
 
 .search-mobile form input{
-    flex: 1;
-    width: 90%;
-    padding: 12px 0 12px 10px;
-    border: none;
-    border-radius: 5px 0 0 5px;
+    flex: 1 !important;
+    width: 90% !important;
+    padding: 12px 0 12px 10px !important;
+    border: none !important;
+    border-radius: 5px 0 0 5px !important;
 }
 .search-mobile form input{
-    outline: none;
+    outline: none !important;
 }
 
 .search-mobile form button{
-    padding: 10.5px;
-    background-color: var(--maximus-green);
-    border:none;
-    border-radius: 0 5px 5px 0;
+    padding: 10.65px !important;
+    background-color: var(--maximus-green) !important;
+    border:none !important;
+    border-radius: 0 5px 5px 0 !important;
 }
 
 .search-mobile form button i{
-    color: white;
-    font-size: 18px;
+    color: white !important;
+    font-size: 18px !important
 }
 
 /*dropdown carrito mobile - ESCONDIDO EN MOBILE*/
