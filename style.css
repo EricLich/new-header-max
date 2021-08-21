@@ -270,7 +270,7 @@ a{
     height: 80%; 
     top: 120px;
     margin: auto;
-    z-index: -3;
+    z-index: 102;
     background-color: black;
     display: flex; 
     flex-direction: row;
