@@ -127,6 +127,7 @@ const categorias = [...document.querySelectorAll('.apertura-cat-principal')];
 const catsSecundarias = [...document.querySelectorAll('.cats-secundarias-sidebar')]
 const catsSidebar = [...document.querySelectorAll('.categorias-sidebar')]
 const catActual = 'cat-actual'
+const flexComponentesPerifericos = 'flex-componentes-perifericos';
 
 categorias.forEach(cat => {
     cat.addEventListener('mouseover', () => {
@@ -136,6 +137,7 @@ categorias.forEach(cat => {
             cat.children[0].classList.add(catActual)
         }
         if(catsSecundarias[categorias.indexOf(cat)].children[0].classList.contains(none)){
+            catsSecundarias[categorias.indexOf(cat)].classList.add(flexComponentesPerifericos)
             catsSecundarias[categorias.indexOf(cat)].children[0].classList.remove(none)
             catsSecundarias[categorias.indexOf(cat)].children[1].classList.remove(none)
         }  
@@ -154,6 +156,7 @@ function agregarNone(){
             if(!catsSecundarias[categorias.indexOf(cat)].children[0].classList.contains(none)){
                 catsSecundarias[categorias.indexOf(cat)].children[0].classList.add(none)
                 catsSecundarias[categorias.indexOf(cat)].children[1].classList.add(none)
+                catsSecundarias[categorias.indexOf(cat)].classList.remove(flexComponentesPerifericos)
                 cat.children[0].classList.remove(catActual)
             }
         }

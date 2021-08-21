@@ -882,6 +882,7 @@ a{
         cursor: pointer;
     }
 
+
     .sidebar-menu-web a{
         color: var(--maximus-green);
     }
@@ -977,13 +978,22 @@ a{
 
     /* SIDEBAR-COMPONENTES CON 2 COLUMAS */
     .sidebar-componentes, .sidebar-perifericos{
-        width: 330px;
+        width: 500px;
         margin: auto;
+        display: none;
+        
+    }
+    .flex-componentes-perifericos{
+        display: flex;
         flex-direction: row;
+        
         background-color: black;
-        justify-content: flex-start;
-        overflow-y: scroll;
+        align-items: flex-start;
+        
         transition: ease-in-out 0.3s;
+    }
+    .columna-side{
+        width: 100%;
     }
 
     .cat-actual{
