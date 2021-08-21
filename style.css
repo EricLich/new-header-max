@@ -26,9 +26,7 @@ body{
     cursor: pointer;
     transition: ease-in-out 1s;
 }
-/* .prods-menu-web{
-    display: none !important;
-} */
+
 /* diseño header */
 header{
     width: 100%;
@@ -981,20 +979,17 @@ a{
     .sidebar-componentes, .sidebar-perifericos{
         width: 500px;
         margin: auto;
-        display: none;
-        
+        display: none;      
     }
     .flex-componentes-perifericos{
-        display: flex;
-        flex-direction: row;
-        
-        background-color: black;
-        align-items: flex-start;
-        
-        transition: ease-in-out 0.3s;
+        display: flex !important;
+        flex-direction: row !important;        
+        background-color: black !important;
+        align-items: flex-start !important;
+        transition: ease-in-out 0.3s !important;
     }
     .columna-side{
-        width: 100%;
+        width: 100% !important;
     }
 
     .cat-actual{
