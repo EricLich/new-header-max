@@ -152,10 +152,12 @@ function agregarNone(){
             catsSecundarias[categorias.indexOf(cat)].classList.add(none)
             cat.children[0].classList.remove(catActual)
         }
-        if(catsSecundarias[categorias.indexOf(cat)].children[0] && catsSecundarias[categorias.indexOf(cat)].children[1]){
+        if(catsSecundarias[categorias.indexOf(cat)].children[0]){
             if(!catsSecundarias[categorias.indexOf(cat)].children[0].classList.contains(none)){
                 catsSecundarias[categorias.indexOf(cat)].children[0].classList.add(none)
-                catsSecundarias[categorias.indexOf(cat)].children[1].classList.add(none)
+                if(catsSecundarias[categorias.indexOf(cat)].children[1]){
+                    catsSecundarias[categorias.indexOf(cat)].children[1].classList.add(none)
+                }
                 catsSecundarias[categorias.indexOf(cat)].classList.remove(flexComponentesPerifericos)
                 cat.children[0].classList.remove(catActual)
             }
