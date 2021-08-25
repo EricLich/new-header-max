@@ -15,6 +15,7 @@ body{
     display: none;
     width: 0;
     height: 0;
+    transition: 0.3s ease-in-out;
 }
 .block{
     display: block;
@@ -48,7 +49,7 @@ header{
 }
 .filler-header{
     width: 100%;
-    height: 12em;
+    height: 9em;
     z-index: 0;
    
 }
@@ -244,16 +245,18 @@ a{
 .search-mobile .form input{
     flex: 1 !important;
     width: 90% !important;
+    height: 100%;
     padding: 12px 0 12px 10px !important;
     border: none !important;
     border-radius: 5px 0 0 5px !important;
+    margin-bottom: 0px !important;
 }
 .search-mobile .form input{
     outline: none !important;
 }
 
 .search-mobile .form button{
-    padding: 10.65px !important;
+    padding: 0.8rem !important;
     background-color: var(--maximus-green) !important;
     border:none !important;
     border-radius: 0 5px 5px 0 !important;
@@ -439,8 +442,13 @@ a{
 .prods-secc-interna{
     color: var(--maximus-green);
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
+
+.link-dropdown{
+    padding: 5px 0;
+}
+
 .link-dropdown a{
     color: white;
 }
@@ -464,6 +472,20 @@ a{
     z-index: 1000;
 }
 
+.slide-back-menu-left{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.slide-back-menu-left h4{
+    color: white;
+    font-size: 1.5rem;
+}
+
+
 .sub-menu-categorias-slide-active{
     transform: translateX(0%);
     background-color: black;
@@ -475,8 +497,15 @@ a{
 }
 
 .prods-slide-left{
+    position: absolute;
+    top: 0;
     height: 100%;
     width: 100%;
+    transform: translateX(-100%);
+    transition: ease-in-out 0.3s;
+}
+.prods-slide-left-active{
+    transform: translateX(0%);
 }
 
 .secc-l, .secc-r{
@@ -487,7 +516,17 @@ a{
 
 .slide-back-menu-left{
     margin-top: 10px;
-    padding: 5px;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--maximus-green);
+}
+
+.lista-seccion-dropdown li{
+    margin-left: 0;
+}
+
+.prods-secc-interna{
+    margin-top: 0.5rem;
 }
 
 
@@ -579,6 +618,9 @@ a{
 
 /***************       PCS      ***************/
 @media (min-width: 769px){
+    .filler-header{
+        height: 12em;
+    }
 
     /* desaparicion de barra d ebusqueda */
     .search-mobile{
@@ -673,7 +715,7 @@ a{
     }
 
     
-    .search-web form{
+    .search-web .form-web{
         width: 80%;
         margin: auto;
         padding:5px 7px 5px 7px;
@@ -688,18 +730,21 @@ a{
     .search-input-mobile{
         margin: 0;
         font-size: 16px;
+	  	height: 100%;
         width: 100%;
         letter-spacing: .5px !important;
         padding-left: 3px;
     }
     
-    .header-top .search-web form input{
-        border: none;
+    .header-top .search-web .form-web input{
+        border: none !important;
+  	    outline:none !important;
+		height: 100%;  
         width: 100%;
         margin-bottom: 0 !important;
     }
     
-    .header-top .search-web form input:focus{
+    .header-top .search-web .form-web input:focus{
         outline: none;
     }
     
@@ -1054,4 +1099,3 @@ a{
     
    
 }
-

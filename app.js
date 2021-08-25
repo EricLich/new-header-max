@@ -59,6 +59,7 @@ menu.addEventListener('click', () => {
 /* MOSTRAR Y OCULTAR SUB CATEGORIA SLIDE LEFT */
 
 const slideActive = 'sub-menu-categorias-slide-active';
+const sideUlActive = 'prods-slide-left-active';
 const categoriasMenuMobile = [...document.querySelectorAll('.menu-productos-dropdown')]
 const subCategoriasLeft = document.querySelector('.sub-menu-categorias-slide')
 const ulCatsLeft = [...document.querySelectorAll('.prods-slide-left')]
@@ -66,13 +67,17 @@ const ulCatsLeft = [...document.querySelectorAll('.prods-slide-left')]
 categoriasMenuMobile.forEach(cat => {
     cat.addEventListener('click', () => {        
         subCategoriasLeft.classList.add(slideActive)
+        ulCatsLeft[categoriasMenuMobile.indexOf(cat)].classList.add(sideUlActive)
         ulCatsLeft[categoriasMenuMobile.indexOf(cat)].classList.remove(none)
 
         const slideBackArrows = [...document.querySelectorAll('.slide-back-menu-left')];
         slideBackArrows.forEach(arrow => {
             arrow.addEventListener('click', () => {
+                ulCatsLeft[categoriasMenuMobile.indexOf(cat)].classList.remove(sideUlActive)
                 subCategoriasLeft.classList.remove(slideActive)
-                ulCatsLeft[categoriasMenuMobile.indexOf(cat)].classList.add(none)
+                setTimeout(() => {                
+                    ulCatsLeft[categoriasMenuMobile.indexOf(cat)].classList.add(none)
+                }, 300);
             })
         })
     })
@@ -91,8 +96,8 @@ cruz.addEventListener('click', () => {
         }
 
         for(ul of ulCatsLeft){
-            if(!ul.classList.contains(none)){
-                ul.classList.add(none)
+            if(ul.classList.contains(sideUlActive)){
+                ul.classList.remove(sideUlActive)
             }
         }
         menuCategorias.classList.remove(menuCatActive)
@@ -180,3 +185,12 @@ hamburguesaWeb.addEventListener('click', () => {
     })
 })
 
+//BUSCADOR
+function fBuscadorMobile(){
+    var B = document.querySelector(".search-input-mobile").value.trim();
+    window.location = "https://www.maximus.com.ar/ARTICULOS/SCA_ID=-1/CAT_ID=-1/SCAT_ID=-1/m=-1/OR=1/BUS=" + B + ";/maximus.aspx" + "?s=" + B;
+}
+function fBuscadorWeb(){
+    var B = document.querySelector(".search-input").value.trim();
+    window.location = "https://www.maximus.com.ar/ARTICULOS/SCA_ID=-1/CAT_ID=-1/SCAT_ID=-1/m=-1/OR=1/BUS=" + B + ";/maximus.aspx" + "?s=" + B;
+}
