@@ -31,10 +31,10 @@ body{
 header{
     width: 100%;
     height: 120px;
-    background-color: #000;
+    background-color: black;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     margin: 0 auto;
     position: fixed;
@@ -48,7 +48,7 @@ header{
 }
 .filler-header{
     width: 100%;
-    height: 10em;
+    height: 12em;
     z-index: 0;
    
 }
@@ -232,7 +232,7 @@ a{
     cursor: pointer !important;
 }
 
-.search-mobile form{
+.search-mobile .form{
     width: 95% !important;
     display: flex !important;
     flex-direction: row !important;
@@ -241,25 +241,25 @@ a{
     margin: auto !important;
 }
 
-.search-mobile form input{
+.search-mobile .form input{
     flex: 1 !important;
     width: 90% !important;
     padding: 12px 0 12px 10px !important;
     border: none !important;
     border-radius: 5px 0 0 5px !important;
 }
-.search-mobile form input{
+.search-mobile .form input{
     outline: none !important;
 }
 
-.search-mobile form button{
+.search-mobile .form button{
     padding: 10.65px !important;
     background-color: var(--maximus-green) !important;
     border:none !important;
     border-radius: 0 5px 5px 0 !important;
 }
 
-.search-mobile form button i{
+.search-mobile .form button i{
     color: white !important;
     font-size: 18px !important
 }
@@ -450,6 +450,48 @@ a{
     margin-bottom: 1rem;
 }
 
+/* SUBMENU SLIDE NEW FEATURE MOBILE */
+.sub-menu-categorias-slide{
+    position:absolute;
+    top: 101%;
+    width: 100%;
+    height: 85vh;
+    overflow-y: scroll;
+    margin: auto;
+    background-color: black;
+    transform: translateX(-100%);
+    transition: ease-in-out 0.3s;
+    z-index: 1000;
+}
+
+.sub-menu-categorias-slide-active{
+    transform: translateX(0%);
+    background-color: black;
+}
+
+.sub-menu-categorias-slide li{
+    width: 85%;
+    margin: auto;
+}
+
+.prods-slide-left{
+    height: 100%;
+    width: 100%;
+}
+
+.secc-l, .secc-r{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.slide-back-menu-left{
+    margin-top: 10px;
+    padding: 5px;
+}
+
+
+
 /* arma tu pc */
 
 .arma-tu-pc{
@@ -611,6 +653,7 @@ a{
         justify-content: flex-end;
     }
 
+
     .search-mobile-button{
         width: 0;
         height: 0;
@@ -628,7 +671,7 @@ a{
         align-self: left;
         margin: auto; 
     }
-    
+
     
     .search-web form{
         width: 80%;
@@ -642,7 +685,7 @@ a{
         align-items: center;
     }
     
-    .search-input{
+    .search-input-mobile{
         margin: 0;
         font-size: 16px;
         width: 100%;
@@ -922,10 +965,10 @@ a{
 
     /* APERTURA CAT SECUNDARIA */
     .cats-secundarias-sidebar{
-        height: 84vh;
+        height: 100vh;
         width: 330px;
         position: absolute;
-        top: 0;
+        top: 0%;
         left: 100%;
         background-color: black;
         border-left: 0.5px solid var(--maximus-green);

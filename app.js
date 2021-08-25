@@ -56,9 +56,29 @@ menu.addEventListener('click', () => {
         menuCategorias.classList.add(menuCatActive)
     }
 })
+/* MOSTRAR Y OCULTAR SUB CATEGORIA SLIDE LEFT */
+
+const slideActive = 'sub-menu-categorias-slide-active';
+const categoriasMenuMobile = [...document.querySelectorAll('.menu-productos-dropdown')]
+const subCategoriasLeft = document.querySelector('.sub-menu-categorias-slide')
+const ulCatsLeft = [...document.querySelectorAll('.prods-slide-left')]
+
+categoriasMenuMobile.forEach(cat => {
+    cat.addEventListener('click', () => {        
+        subCategoriasLeft.classList.add(slideActive)
+        ulCatsLeft[categoriasMenuMobile.indexOf(cat)].classList.remove(none)
+
+        const slideBackArrows = [...document.querySelectorAll('.slide-back-menu-left')];
+        slideBackArrows.forEach(arrow => {
+            arrow.addEventListener('click', () => {
+                subCategoriasLeft.classList.remove(slideActive)
+                ulCatsLeft[categoriasMenuMobile.indexOf(cat)].classList.add(none)
+            })
+        })
+    })
+})
+//CERRAR MENU DE CATEGORIAS MOBILE
 cruz.addEventListener('click', () => {
-    const minuses = document.querySelectorAll('.fa-minus')
-    const pluses = document.querySelectorAll('.fa-plus')
     if(cruz.classList.contains(claseCruzActiva)){
         cruz.classList.remove(claseCruzActiva);
         menu.classList.remove(hamburgerInactivo)
@@ -66,22 +86,13 @@ cruz.addEventListener('click', () => {
             span.classList.remove(hamburgerInactivo)
         }
 
-        for(drop of prodsDropdown){
-            if(!drop.classList.contains(none)){
-                drop.classList.add(none)
-                drop.classList.remove(flex)
-            }
+        if(subCategoriasLeft.classList.contains(slideActive)){
+            subCategoriasLeft.classList.remove(slideActive)
         }
 
-        for(plus of pluses){
-            if(plus.classList.contains(none)){
-                plus.classList.remove(none)
-            }
-        }
-
-        for(minus of minuses){
-            if(!minus.classList.contains(none)){
-                minus.classList.add(none)
+        for(ul of ulCatsLeft){
+            if(!ul.classList.contains(none)){
+                ul.classList.add(none)
             }
         }
         menuCategorias.classList.remove(menuCatActive)
@@ -89,24 +100,7 @@ cruz.addEventListener('click', () => {
 })
 
 
-//MOSTRAR Y OCULTAR DROPDOWNS DE CATEGORIAS EN MOBILE Y WEB
-const showOrHide = (element) => {
-    const ulDropDown = element.parentElement.children[1];
-    const plus = element.children[1].children[0];
-    const minus = element.children[1].children[1];
 
-    if(ulDropDown.classList.contains(none)){
-        ulDropDown.classList.remove(none);
-        ulDropDown.classList.add(flex)
-        plus.classList.add(none)
-        minus.classList.remove(none)
-    }else{
-        ulDropDown.classList.remove(flex)
-        ulDropDown.classList.add(none)
-        plus.classList.remove(none)
-        minus.classList.add(none)
-    }
-}
 
 //MOSTRAR Y OCULTAR BARRA DE CATEGORIAS EN WEB Y MOSTRAR SUB CATEGORIAS
 
