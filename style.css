@@ -28,6 +28,10 @@ body{
     transition: ease-in-out 1s;
 }
 
+.unscrollable{
+    position: fixed;
+}
+
 /* diseño header */
 header{
     width: 100%;
@@ -267,6 +271,38 @@ a{
     font-size: 18px !important
 }
 
+/* AUTOCOMPLETADO MOBILE */
+.auto-complete-mobile{
+    position: absolute;  
+    width: 85%;
+    background-color: #fff;
+    margin: auto;
+    border: none;
+    left: 12%;
+    top: 67%;
+    border: 0.5px solid rgba(198, 198, 198, 0.516);
+    border-top: none;
+    z-index: -10;
+    
+}
+
+.auto-complete-mobile:first-child{
+    border-radius: 5px 5px 0 0;
+}
+
+.auto-complete-mobile:last-child{
+    border-radius: 0 0 5px 5px;
+}
+
+.auto-search{
+    width: 100%;
+    border: none;
+    transition: ease-in-out 0.2s;
+    padding: 20px;
+}
+
+
+
 /*dropdown carrito mobile - ESCONDIDO EN MOBILE*/
 .carrito-drop-mobile{
     position: absolute;
@@ -463,7 +499,7 @@ a{
     position:absolute;
     top: 101%;
     width: 100%;
-    height: 85vh;
+    height: 80vh;
     overflow-y: scroll;
     margin: auto;
     background-color: black;
@@ -612,6 +648,17 @@ a{
     .prods-dropdown h4{
         font-size: 0.9rem;
     }
+    .auto-complete-mobile{
+        position: absolute;  
+        width: 90%;
+        background-color: #fff;
+        margin: auto;
+        border: none;
+        left: 6.9%;
+        top: 68%;
+        
+        
+    }
 
 }
 
@@ -707,8 +754,8 @@ a{
     }
 
     .search-web{
-        display: flex;
-        flex-direction: column;
+        position: relative;
+        display: block;
         width: 100%;
         align-self: left;
         margin: auto; 
@@ -965,7 +1012,7 @@ a{
         margin: auto;
         padding: 1rem 0;
     }
-
+    
     .categorias-sidebar{
         width: 100%;
         height: 200px;
@@ -980,12 +1027,12 @@ a{
         width: 100%;
         cursor: pointer;
     }
-
-
+    
+    
     .sidebar-menu-web a{
         color: var(--maximus-green);
     }
-
+    
     .apertura-cat-principal{
         display: flex;
         flex-direction: row;
@@ -1007,7 +1054,7 @@ a{
     .apertura-cat-principal:hover a{
         color: white;
     }
-
+    
     /* APERTURA CAT SECUNDARIA */
     .cats-secundarias-sidebar{
         height: 100vh;
@@ -1019,9 +1066,9 @@ a{
         border-left: 0.5px solid var(--maximus-green);
         transition: ease-in-out 0.3s;
         z-index: 8;
-        
+        overflow-y: scroll;
     }
-
+    
     .cat-secundaria{
         width: 85%;
         margin: auto;
@@ -1096,6 +1143,104 @@ a{
     .cat-actual{
         color: white !important;
     }
-    
+    /* AUTOCOMPLETADO WEB */
+    .auto-complete-web{
+        position: absolute;  
+        top: 86%;
+        width: 80%;
+        background-color: #fff;
+        margin: auto;
+        border: none;
+        left: 10%;
+        border: 0.5px solid rgba(198, 198, 198, 0.66);
+        border-top: none;
+        z-index: -1;
+    }
+
+    .auto-complete-web:first-child{
+        border-radius: 5px 5px 0 0;
+    }
+
+    .auto-complete-web:last-child{
+        border-radius: 0 0 5px 5px;
+    }
+
+    .auto-search{
+        width: 100%;
+        border: none;
+        transition: ease-in-out 0.2s;
+        padding: 20px;
+    }
+    .auto-search:hover{
+        background-color: rgb(230, 230, 230);
+    }
+
+    .auto-search a{
+        width: 100%;
+        text-decoration: none;
+        color: black;
+    }
+    .auto-search-selected{
+        background-color: rgb(230, 230, 230);
+    }
    
 }
+main{
+    height: 1900px;
+}
+
+
+
+
+@media (max-width: 1400px){
+    .cats-secundarias-sidebar{
+        height: 82vh;
+    }
+}
+@media (max-width: 1300px){
+    .cats-secundarias-sidebar{
+        height: 80vh;
+    }
+}
+@media (max-width: 1250px){
+    .cats-secundarias-sidebar{
+        height: 78vh;
+    }
+}
+@media (max-width: 1200px){
+    .cats-secundarias-sidebar{
+        height: 75vh;
+    }
+}
+@media (max-width: 1150px){
+    .cats-secundarias-sidebar{
+        height: 74vh;
+    }
+}
+@media (max-width: 1130px){
+    .cats-secundarias-sidebar{
+        height: 73vh;
+    }
+}
+@media (max-width: 1120px){
+    .cats-secundarias-sidebar{
+        height: 72vh;
+    }
+}
+@media (max-width: 1110px){
+    .cats-secundarias-sidebar{
+        height: 71vh;
+    }
+}
+@media (max-width: 1100px){
+    .cats-secundarias-sidebar{
+        height: 70.5vh;
+    }
+}
+@media (max-width: 1090px){
+    .cats-secundarias-sidebar{
+        height: 70vh;
+    }
+}
+
+

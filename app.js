@@ -28,6 +28,8 @@ buttonSearch.addEventListener('click', () =>{
     flechaGuardarBusqueda.addEventListener('click', () => {
         if(searchMobile.classList.contains(claseActive)){
             searchMobile.classList.remove(claseActive)
+            suggBoxMobile.innerHTML = ''
+            inputMobile.value = ''
         }
     })
 })
@@ -41,6 +43,7 @@ const hamburgerInactivo = "hamburger-inactive";
 const prodsDropdown = document.querySelectorAll('.prods-dropdown')
 const none = "none"
 const flex = "flex";
+const unscrollable = 'unscrollable'
 
 const menuCategorias = document.querySelector('.menu-categorias');
 const menuCatActive = "menu-categorias-active"
@@ -48,6 +51,7 @@ const menuCatActive = "menu-categorias-active"
 
 menu.addEventListener('click', () => {
     if(!cruz.classList.contains(claseCruzActiva)){
+        document.body.classList.add(unscrollable)
         cruz.classList.add(claseCruzActiva);
         menu.classList.add(hamburgerInactivo);
         for(span of spans){
@@ -85,6 +89,8 @@ categoriasMenuMobile.forEach(cat => {
 //CERRAR MENU DE CATEGORIAS MOBILE
 cruz.addEventListener('click', () => {
     if(cruz.classList.contains(claseCruzActiva)){
+        document.body.classList.remove(unscrollable)
+
         cruz.classList.remove(claseCruzActiva);
         menu.classList.remove(hamburgerInactivo)
         for(span of spans){
@@ -167,14 +173,17 @@ function agregarNone(){
 
 const opacityDiv = document.querySelector('.opacidad-menu')
 hamburguesaWeb.addEventListener('click', () => {
+    document.body.classList.add(unscrollable)
     opacityDiv.classList.remove(none);
     sidebarMenuWeb.classList.add(sidebarActive)
     hamburguesaWeb.classList.add(hamburgerWebInactive)
     cruzWeb.classList.remove(none)
     
     opacityDiv.addEventListener('mouseover', () => {
+        document.body.classList.remove(unscrollable)
         setTimeout(() => {
             agregarNone()
+
         }, 1000);
     })
     cruzWeb.addEventListener('click', () => {
@@ -194,3 +203,202 @@ function fBuscadorWeb(){
     var B = document.querySelector(".search-input").value.trim();
     window.location = "https://www.maximus.com.ar/ARTICULOS/SCA_ID=-1/CAT_ID=-1/SCAT_ID=-1/m=-1/OR=1/BUS=" + B + ";/maximus.aspx" + "?s=" + B;
 }
+
+//ENTER PARA BUSCADOR WEB
+document.querySelector(".search-input")
+    .addEventListener("keyup", event => {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        fBuscadorWeb();
+    }
+});
+document.querySelector(".search-input-mobile")
+    .addEventListener("keyup", event => {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        fBuscadorMobile();
+    }
+});
+
+/* AUTOCOMPLETADO SEARCH WEB */
+const inputWeb = document.querySelector('.search-input');
+const suggBoxWeb = document.querySelector('.auto-complete-web')
+let busquedas = [];
+let suggestions = [];
+let catsOrdenadas = [];
+
+inputWeb.addEventListener('input', async () => {
+    let userData = inputWeb.value;
+    let mayoresCatsRepetidas = [];
+    //fetch de los datos del server
+    if(suggestions.length == 0){
+        suggestions = await fetch('http://localhost:3000/productos')
+                                .then(res => res.json())
+                                .catch(err => console.log(err))
+    }
+
+    //si las sugerencias y lo que se ingreso no estan vacios
+    nombresCat = []
+    if(suggestions && userData.length > 0){
+        busquedas = suggestions.filter(data => {
+            return data.nomProd.toLocaleLowerCase().includes(userData.toLocaleLowerCase());
+        });
+        suggestions = busquedas;
+        //tomo todas las categorias
+        busquedas.forEach(sugg => {            
+            mayoresCatsRepetidas.push(sugg.cat);
+        })
+        //ordeno las categorias alfabeticamente y acomodo el array segun cantidad de coincidencias
+        mayoresCatsRepetidas.sort((a, b) => a.localeCompare(b))
+
+        //remuevo las categorias repetidas
+        mayoresCatsRepetidas = mayoresCatsRepetidas.filter((cat, index) => cat != mayoresCatsRepetidas[index - 1]).splice(0, 3)
+        
+        //creo el html con las categorias limitadas
+        busquedas = busquedas.splice(0, 6).map((data) => {
+            return data =  `<div class="auto-search">
+                                <a href="https://www.maximus.com.ar/DETALLE/${data.nomProd.split(' ').join('-')}/ITEM_ID=${data.ID}/maximus.aspx" class="auto-link"><strong>${data.nomProd}</strong></a>                                    
+                            </div>`
+        }).join('')
+
+        mayoresCatsRepetidas = mayoresCatsRepetidas.map(cat => {
+            return cat = `<div class="auto-search">
+                              <a href="https://www.maximus.com.ar/" class="auto-link">Busca más productos en<strong>&nbsp;${cat}</strong></a>                                    
+                          </div>`
+        }).join('')
+
+        let total = busquedas + ' ' + mayoresCatsRepetidas
+
+        if(busquedas.length > 0){
+            suggBoxWeb.innerHTML = total;
+            let inputInitValue = inputWeb.value;
+            document.onkeydown = () => {
+                if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){
+                    moveThroughSuggestions(event.key, 0, inputInitValue)
+                }
+            }
+        }else{
+            suggBoxWeb.innerHTML = '<div class="auto-search">No se encontraron coincidencias</div>';
+        }
+    }else{
+        checkEmpty(busquedas, inputWeb, suggBoxWeb)
+    }
+})
+
+/* AUTOCOMPLETADO CON RELLENO DE INPUT Y FLECHITAS */
+function moveThroughSuggestions(keyPressed, pos, inputInitValue){
+    let autoSearchs = document.querySelectorAll('.auto-search');
+    if(keyPressed == 'ArrowDown'){
+        if(pos == -1){
+            pos = 0;
+            autoSearchs[pos].classList.add('auto-search-selected')
+            inputWeb.value = autoSearchs[pos].children[0].innerHTML.substring(autoSearchs[pos].children[0].innerHTML.indexOf('>') + 1, autoSearchs[pos].children[0].innerHTML.indexOf('/') - 1) 
+            document.onkeydown = () => {
+                if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){
+                    autoSearchs[pos].classList.remove('auto-search-selected')
+                    pos = event.key == 'ArrowUp' ? pos -= 1 : pos;
+                    moveThroughSuggestions(event.key, pos, inputInitValue)        
+                }
+            }
+            
+        }else if(pos == autoSearchs.length){
+            pos = 0;
+            inputWeb.value = autoSearchs[pos].children[0].innerHTML.substring(autoSearchs[pos].children[0].innerHTML.indexOf('>') + 1, autoSearchs[pos].children[0].innerHTML.indexOf('/') - 1) 
+            document.onkeydown = () => {
+                if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){
+                    autoSearchs[pos].classList.remove('auto-search-selected')
+                    pos = event.key == 'ArrowUp' ? pos -= 1 : pos;
+                    moveThroughSuggestions(event.key, pos, inputInitValue)        
+                }
+            }
+        }else if(pos < autoSearchs.length){
+            autoSearchs[pos].classList.add('auto-search-selected')
+            inputWeb.value = autoSearchs[pos].children[0].innerHTML.substring(autoSearchs[pos].children[0].innerHTML.indexOf('>') + 1, autoSearchs[pos].children[0].innerHTML.indexOf('/') - 1) 
+            pos += 1;
+            document.onkeydown = () => {
+                if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){ 
+                    autoSearchs[pos - 1].classList.remove('auto-search-selected')
+                    pos = event.key == 'ArrowUp' ? pos -= 1 : pos;
+                    moveThroughSuggestions(event.key, pos, inputInitValue)        
+                }
+            }
+        }
+    }else if(keyPressed = 'ArrowUp'){
+        if(pos == -1){
+            pos = autoSearchs.length - 1
+            autoSearchs[pos].classList.add('auto-search-selected')
+            inputWeb.value = autoSearchs[pos].children[0].innerHTML.substring(autoSearchs[pos].children[0].innerHTML.indexOf('>') + 1, autoSearchs[pos].children[0].innerHTML.indexOf('/') - 1) 
+            document.onkeydown = () => {
+                if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){
+                    autoSearchs[pos].classList.remove('auto-search-selected') 
+                    pos = event.key == 'ArrowDown' ? pos += 1 : pos;                   
+                    moveThroughSuggestions(event.key, pos, inputInitValue)        
+                }
+            }
+        }else if(pos > 0){
+            pos -= 1;
+            autoSearchs[pos].classList.add('auto-search-selected')
+            inputWeb.value = autoSearchs[pos].children[0].innerHTML.substring(autoSearchs[pos].children[0].innerHTML.indexOf('>') + 1, autoSearchs[pos].children[0].innerHTML.indexOf('/') - 1) 
+            document.onkeydown = () => {
+                if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){
+                    autoSearchs[pos].classList.remove('auto-search-selected')
+                    pos = event.key == 'ArrowDown' ? pos += 1 : pos;                   
+                    moveThroughSuggestions(event.key, pos, inputInitValue)        
+                }
+            }
+        }else if(pos == autoSearchs.length - 1){
+            pos = 0;
+            autoSearchs[pos].classList.add('auto-search-selected')
+            inputWeb.value = autoSearchs[pos].children[0].innerHTML.substring(autoSearchs[pos].children[0].innerHTML.indexOf('>') + 1, autoSearchs[pos].children[0].innerHTML.indexOf('/') - 1) 
+            document.onkeydown = () => {
+                if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){
+                    autoSearchs[pos].classList.remove('auto-search-selected')
+                    pos = event.key == 'ArrowDown' ? pos += 1 : pos;                   
+                    moveThroughSuggestions(event.key, pos, inputInitValue)        
+                }
+            }
+        }else if(pos == 0){
+            inputWeb.value = inputInitValue
+            document.onkeydown = () => {
+                if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){
+                    pos = event.key == 'ArrowDown' ? pos += 1 : pos;                          
+                    moveThroughSuggestions(event.key, pos - 1, inputInitValue) 
+                }
+            }
+        }
+    }
+}
+
+function checkEmpty(lista, input, suggBox){
+    if(input.value == "" || busquedas.value == ""){
+        suggBox.innerHTML = ''
+        busquedas = []
+    }
+}
+/* AUTOCOMPLETADO SEARCH MOBILE */
+const inputMobile = document.querySelector('.search-input-mobile');
+const suggBoxMobile = document.querySelector('.auto-complete-mobile')
+
+inputMobile.addEventListener('input', (e) => {
+    let userData = inputMobile.value;
+    if(userData.length > 0){
+        busquedas = suggestions.filter(data => {
+            return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+        });
+        busquedas = busquedas.map((data) => {
+            return data =  `<div class="auto-search">
+                                <a href="https://www.maximus.com.ar" class="auto-link">${data}</a>                                    
+                            </div>`
+        }).join('')
+        if(busquedas.length > 0){
+            suggBoxMobile.innerHTML = busquedas;
+            
+        }else{
+            suggBoxMobile.innerHTML = '<div class="auto-search">No se encontraron coincidencias</div>';
+        }
+    }else{
+        checkEmpty(busquedas, inputMobile, suggBoxMobile)
+    }
+})
+
+

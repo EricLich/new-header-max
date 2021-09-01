@@ -30,8 +30,12 @@
             <div class="search-mobile">
                 <div class="form">
                     <i class="fas fa-arrow-left guardar-search-mobile"></i>
-                    <input type="text" placeholder="BUSCAR..." class="search-input-mobile">
+                    <input type="text" placeholder="BUSCAR..." class="search-input-mobile" name="buscador" autocomplete="off" >
                     <button onclick="fBuscadorMobile()"><i class="fas fa-search"></i></button>  
+                </div>
+                <!-- AUTOCOMPLETADO SEARCH -->
+                <div class="auto-complete-mobile">
+                            
                 </div>
             </div>
             <!-- carrito desplegable -->
@@ -672,9 +676,14 @@
                     <!-- search para web -->
                     <div class="search-web">
                         <div class="form-web">
-                            <input type="text" placeholder="BUSCAR..." class="search-input">
+                            <input type="text" placeholder="BUSCAR..." class="search-input" name="buscador" autocomplete="off" >
                             <button onclick="fBuscadorWeb(event)"><i class="fas fa-search"></i></button>  
                         </div>
+                        <!-- AUTOCOMPLETADO SEARCH -->
+                        <div class="auto-complete-web">
+                            
+                        </div>
+
                     </div>
                     
     
@@ -1223,7 +1232,9 @@
                 </div>                       
             </aside>
         </header>
+
         <div class="opacidad-menu none"></div>
+        <main></main>
         <script src="./app.js"></script>
 </body>
 </html>
