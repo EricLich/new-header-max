@@ -225,7 +225,6 @@ const inputWeb = document.querySelector('.search-input');
 const suggBoxWeb = document.querySelector('.auto-complete-web')
 let busquedas = [];
 let suggestions = [];
-let catsOrdenadas = [];
 
 inputWeb.addEventListener('input', async () => {
     let userData = inputWeb.value;
@@ -261,20 +260,24 @@ inputWeb.addEventListener('input', async () => {
                             </div>`
         }).join('')
 
+        //creo el html para las 3 categorias
         mayoresCatsRepetidas = mayoresCatsRepetidas.map(cat => {
             return cat = `<div class="auto-search">
-                              <a href="https://www.maximus.com.ar/" class="auto-link">Busca más productos en<strong>&nbsp;${cat}</strong></a>                                    
+                              <a href="https://www.maximus.com.ar/" class="auto-link sugg-cat-mobile">Busca más productos en<strong>&nbsp;${cat}</strong></a>                                    
                           </div>`
         }).join('')
 
-        let total = busquedas + ' ' + mayoresCatsRepetidas
+        //creo el html de las sugerencias mas el html de las categorias a mostrar
+        let totalHTML = busquedas + ' <hr class="thin-line container"> ' + mayoresCatsRepetidas
 
         if(busquedas.length > 0){
-            suggBoxWeb.innerHTML = total;
+            suggBoxWeb.innerHTML = totalHTML;
             let inputInitValue = inputWeb.value;
             document.onkeydown = () => {
                 if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){
                     moveThroughSuggestions(event.key, 0, inputInitValue)
+                }else if(event.key === "Escape"){
+                    suggBoxWeb.innerHTML = ''
                 }
             }
         }else{
@@ -372,33 +375,65 @@ function moveThroughSuggestions(keyPressed, pos, inputInitValue){
 function checkEmpty(lista, input, suggBox){
     if(input.value == "" || busquedas.value == ""){
         suggBox.innerHTML = ''
-        busquedas = []
+        lista = []
     }
 }
 /* AUTOCOMPLETADO SEARCH MOBILE */
 const inputMobile = document.querySelector('.search-input-mobile');
 const suggBoxMobile = document.querySelector('.auto-complete-mobile')
 
-inputMobile.addEventListener('input', (e) => {
+inputMobile.addEventListener('input', async (e) => {
     let userData = inputMobile.value;
-    if(userData.length > 0){
+    let mayoresCatsRepetidas = [];
+    //fetch de los datos del server
+    if(suggestions.length == 0){
+        suggestions = await fetch('http://localhost:3000/productos')
+                                .then(res => res.json())
+                                .catch(err => console.log(err))
+    }
+    nombresCat = []
+    if(suggestions && userData.length > 0){
         busquedas = suggestions.filter(data => {
-            return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+            return data.nomProd.toLocaleLowerCase().includes(userData.toLocaleLowerCase());
         });
-        busquedas = busquedas.map((data) => {
+        suggestions = busquedas;
+        //tomo todas las categorias
+        busquedas.forEach(sugg => {            
+            mayoresCatsRepetidas.push(sugg.cat);
+        })
+        //ordeno las categorias alfabeticamente y acomodo el array segun cantidad de coincidencias
+        mayoresCatsRepetidas.sort((a, b) => a.localeCompare(b))
+
+        //remuevo las categorias repetidas
+        mayoresCatsRepetidas = mayoresCatsRepetidas.filter((cat, index) => cat != mayoresCatsRepetidas[index - 1]).splice(0, 2)
+        
+        //creo el html con las categorias limitadas
+        busquedas = busquedas.splice(0, 3).map((data) => {
             return data =  `<div class="auto-search">
-                                <a href="https://www.maximus.com.ar" class="auto-link">${data}</a>                                    
+                                <a href="https://www.maximus.com.ar/DETALLE/${data.nomProd.split(' ').join('-')}/ITEM_ID=${data.ID}/maximus.aspx" class="auto-link"><strong>${data.nomProd}</strong></a>                                    
                             </div>`
         }).join('')
+
+
+        //creo el html para las 3 categorias
+        mayoresCatsRepetidas = mayoresCatsRepetidas.map(cat => {
+            return cat = `<div class="auto-search">
+                              <a href="https://www.maximus.com.ar/" class="auto-link">Busca más productos en<strong>&nbsp;${cat}</strong></a>                                    
+                          </div>`
+        }).join('')
+
+        //creo el html de las sugerencias mas el html de las categorias a mostrar
+        let totalHTML = busquedas + ' <hr class="thin-line container"> ' + mayoresCatsRepetidas
+
         if(busquedas.length > 0){
-            suggBoxMobile.innerHTML = busquedas;
-            
+            suggBoxMobile.innerHTML = totalHTML;
         }else{
             suggBoxMobile.innerHTML = '<div class="auto-search">No se encontraron coincidencias</div>';
         }
     }else{
         checkEmpty(busquedas, inputMobile, suggBoxMobile)
     }
+
 })
 
 

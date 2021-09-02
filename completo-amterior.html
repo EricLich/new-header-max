@@ -1553,6 +1553,20 @@ inputWeb.addEventListener('input', () => {
         }).join('')
         if(busquedas.length > 0){
             suggBoxWeb.innerHTML = busquedas;
+		  let inputInitValue = inputWeb.value;
+		  let autoLink = document.querySelectorAll('.auto-link');
+            autoLink.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    inputWeb.value = link.innerHTML
+                    fBuscadorWeb()
+                })
+            })
+            document.onkeydown = () => {
+                if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){
+                    moveThroughSuggestions(event.key, 0, inputInitValue)
+                }
+            }
         }else{
             suggBoxWeb.innerHTML = '<div class="auto-search">No se encontraron coincidencias</div>';
         }
@@ -1560,6 +1574,92 @@ inputWeb.addEventListener('input', () => {
         checkEmpty(busquedas, inputWeb, suggBoxWeb)
     }
 })
+	  
+/* AUTOCOMPLETADO CON RELLENO DE INPUT Y FLECHITAS */
+function moveThroughSuggestions(keyPressed, pos, inputInitValue){
+    console.log(keyPressed)
+    let autoSearchs = document.querySelectorAll('.auto-search');
+    if(keyPressed == 'ArrowDown'){
+        if(pos == -1){
+            pos = 0;
+            autoSearchs[pos].classList.add('auto-search-selected')
+            inputWeb.value = autoSearchs[pos].children[0].innerHTML;
+            document.onkeydown = () => {
+                if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){
+                    autoSearchs[pos].classList.remove('auto-search-selected')
+                    pos = event.key == 'ArrowUp' ? pos -= 1 : pos;
+                    moveThroughSuggestions(event.key, pos, inputInitValue)        
+                }
+            }
+            
+        }else if(pos == autoSearchs.length){
+            pos = 0;
+            inputWeb.value = inputInitValue;
+            document.onkeydown = () => {
+                if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){
+                    autoSearchs[pos].classList.remove('auto-search-selected')
+                    pos = event.key == 'ArrowUp' ? pos -= 1 : pos;
+                    moveThroughSuggestions(event.key, pos, inputInitValue)        
+                }
+            }
+        }else if(pos < autoSearchs.length){
+            autoSearchs[pos].classList.add('auto-search-selected')
+            inputWeb.value = autoSearchs[pos].children[0].innerHTML;
+            pos += 1;
+            document.onkeydown = () => {
+                if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){ 
+                    autoSearchs[pos - 1].classList.remove('auto-search-selected')
+                    pos = event.key == 'ArrowUp' ? pos -= 1 : pos;
+                    moveThroughSuggestions(event.key, pos, inputInitValue)        
+                }
+            }
+        }
+    }else if(keyPressed = 'ArrowUp'){
+        if(pos == -1){
+            pos = autoSearchs.length - 1
+            autoSearchs[pos].classList.add('auto-search-selected')
+            inputWeb.value = autoSearchs[pos].children[0].innerHTML;
+            document.onkeydown = () => {
+                if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){
+                    autoSearchs[pos].classList.remove('auto-search-selected') 
+                    pos = event.key == 'ArrowDown' ? pos += 1 : pos;                   
+                    moveThroughSuggestions(event.key, pos, inputInitValue)        
+                }
+            }
+        }else if(pos > 0){
+            pos -= 1;
+            autoSearchs[pos].classList.add('auto-search-selected')
+            inputWeb.value = autoSearchs[pos].children[0].innerHTML;
+            document.onkeydown = () => {
+                if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){
+                    autoSearchs[pos].classList.remove('auto-search-selected')
+                    pos = event.key == 'ArrowDown' ? pos += 1 : pos;                   
+                    moveThroughSuggestions(event.key, pos, inputInitValue)        
+                }
+            }
+        }else if(pos == autoSearchs.length - 1){
+            pos = 0;
+            autoSearchs[pos].classList.add('auto-search-selected')
+            inputWeb.value = autoSearchs[pos].children[0].innerHTML;
+            document.onkeydown = () => {
+                if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){
+                    autoSearchs[pos].classList.remove('auto-search-selected')
+                    pos = event.key == 'ArrowDown' ? pos += 1 : pos;                   
+                    moveThroughSuggestions(event.key, pos, inputInitValue)        
+                }
+            }
+        }else if(pos == 0){
+            inputWeb.value = inputInitValue
+            document.onkeydown = () => {
+                if(event.key == 'ArrowDown' || event.key == 'ArrowUp'){
+                    pos = event.key == 'ArrowDown' ? pos += 1 : pos;                          
+                    moveThroughSuggestions(event.key, pos - 1, inputInitValue) 
+                }
+            }
+        }
+    }
+}
+	  
 
 function checkEmpty(lista, input, suggBox){
     if(input.value == "" || busquedas.value == ""){
@@ -2689,11 +2789,11 @@ a{
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 7px 0;
+        padding: 5px 0;
         transition: ease-in-out 0.3s;
     }
     .cat-secundaria-titulo-icono{
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     .cat-secundaria-titulo-icono i{
         color: var(--maximus-green);
@@ -2715,7 +2815,7 @@ a{
 
     .cat-secundaria-interno a{
         color: white;
-        margin-top: 0.3rem;
+        margin-top: 0.1rem;
     }
 
     .cat-secundaria-interno a:hover{
@@ -2797,6 +2897,10 @@ a{
         width: 100%;
         text-decoration: none;
         color: black;
+    }
+  
+  .auto-search-selected{
+        background-color: rgb(230, 230, 230);
     }
   
    

@@ -302,6 +302,20 @@ a{
 }
 
 
+.auto-search a{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+.auto-search a strong{
+    font-size: 0.78rem;
+}
+.auto-link{
+    font-size: 0.8em !important;
+}
+
+
+
 
 /*dropdown carrito mobile - ESCONDIDO EN MOBILE*/
 .carrito-drop-mobile{
@@ -1168,17 +1182,23 @@ a{
     .auto-search{
         width: 100%;
         border: none;
-        transition: ease-in-out 0.2s;
+        transition: ease-in-out 0.1s;
         padding: 20px;
     }
     .auto-search:hover{
         background-color: rgb(230, 230, 230);
     }
-
+    
     .auto-search a{
         width: 100%;
         text-decoration: none;
         color: black;
+    }
+    .auto-search a strong{
+        font-size: 1.1em;
+    }
+    .auto-link{
+        font-size: 1.1em;
     }
     .auto-search-selected{
         background-color: rgb(230, 230, 230);
@@ -1243,4 +1263,8 @@ main{
     }
 }
 
+.thin-line{
+    color: var(--maximus-green);
+    opacity: 0.2;
+}
 
